@@ -112,7 +112,7 @@ Refer to the instructions provided for
 Examples of problems ready to be performed are provided in repositories of vOptSpecific and vOptGeneric respectively.
 
 ## Documentation
-- presentation for new users
+- Guide for new users
 - presentation given in conferences
 
 
