@@ -1,6 +1,6 @@
 # Solver of multiobjective linear optimization problems
 
-**vOptSolver** is a solver of multiobjective linear optimization problems (MOCO, MOILP, MOMIP, MOLP). It is currently supported by the ANR/DFG-14-CE35-0034-01 research project [(link)](https://vopt-ANR-DFG.univ-nantes.fr/). 
+**vOptSolver** is a solver of multiobjective linear optimization problems (MOCO, MOIP, MOMIP, MOLP). It is currently supported by the ANR/DFG-14-CE35-0034-01 research project [(link)](https://vopt-ANR-DFG.univ-nantes.fr/). 
 The version 0.2 integrates exact algorithms for computing a complete set of non-dominated points for structured and non-structured optimization problems with two [and three] objectives ([ ] = forthcoming).
 
 This repository (1) gives a description of the solver and (2) hosts documents covering all parts of the solver.
@@ -19,7 +19,7 @@ This repository (1) gives a description of the solver and (2) hosts documents co
 ### News
     03-Jun-2017: The next release (v0.2) is scheduled for June 2017
     17-Jun-2017: Moved from GitLab to GitHub
-    26-Jun-2017: Source code of vOptGeneric and vOptSpecific online
+    26-Jun-2017: Source code of vOptGeneric and vOptSpecific are online
 
 ### Feedback
 All bugs, feature requests, pull requests, feedback, etc., are welcome. 
