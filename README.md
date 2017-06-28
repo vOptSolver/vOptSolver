@@ -11,6 +11,8 @@ This repository (1) gives a description of the solver and (2) hosts documents co
 - [Overview](./README.md#overview)
 - [Features](./README.md#features)
 - [Instructions](./README.md#instructions)
+- [Examples](./README.md#examples)
+- [Documentation](./README.md#documentation)
 - [References](./README.md#references)
 
 
@@ -106,13 +108,12 @@ Refer to the instructions provided for
 - [vOptGeneric](https://github.com/vOptSolver/vOptGeneric.jl)
 
 
-## Resources availables:
+## Examples
+- examples of problems ready to be performed are provided in repositories of vOptSpecific and vOptGeneric respectively
 
-- Examples: 
-    - problems ready to be solved are provided in vOptSpecific and vOptGeneric repositories
-- Documentation: 
-    - presentation for new users
-    - presentation given in conferences
+## Documentation: 
+- presentation for new users
+- presentation given in conferences
 
 
 ## References
