@@ -165,7 +165,7 @@ Examples of problems ready to be performed are provided in repositories of vOptS
 Terms and acronyms used
 - LP: Linear Program
 - MILP: Mixed Integer Linear Program
-- ILP: Integer Linear program
+- IP: Integer linear program
 - MOCO: MultiObjective Combinatorial Optimization
 - MOMILP: MultiObjective Mixed Integer Linear Program
 - MOP: MultiObjective Program
