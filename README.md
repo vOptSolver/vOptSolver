@@ -101,7 +101,9 @@ The solving algorithms included compute an exact complete set of non-dominated p
 - vOptSolver is free, open source under [GPL] licence, tested with Julia 0.6 on macOS and linux-Ubuntu
 
 ### Installation and usage Instructions
-Refer to the instructions provided for vOptSpecific and vOptGeneric.
+Refer to the instructions provided for
+- [vOptSpecific](https://github.com/vOptSolver/vOptSpecific.jl)
+- [vOptGeneric](https://github.com/vOptSolver/vOptGeneric.jl)
 
 
 ## References
