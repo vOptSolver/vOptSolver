@@ -109,9 +109,9 @@ Refer to the instructions provided for
 
 
 ## Examples
-- examples of problems ready to be performed are provided in repositories of vOptSpecific and vOptGeneric respectively
+Examples of problems ready to be performed are provided in repositories of vOptSpecific and vOptGeneric respectively.
 
-## Documentation: 
+## Documentation
 - presentation for new users
 - presentation given in conferences
 
