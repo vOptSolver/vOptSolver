@@ -8,7 +8,7 @@ This repository (1) gives a description of the solver and (2) hosts documents co
 
 ### Content
 
-- [Presentation](./README.md#presentation)
+- [Overview](./README.md#overview)
 - [Features](./README.md#features)
 - [Instructions](./README.md#instructions)
 - [References](./README.md#references)
@@ -31,7 +31,7 @@ vOptSolver: an open source software environment for multiobjective mathematical 
 *IFORS2017: 21st Conference of the International Federation of Operational Research Societies*. 
 July 17-21, 2017 Quebec City, Canada.
 
-## Presentation
+## Overview
 
 ### Aims
 - Solver of multiobjective linear optimization problems for scientifics and practionners
@@ -100,32 +100,9 @@ The solving algorithms included compute an exact complete set of non-dominated p
 - Julia is available on macOS, linux, windows for a local use or online on [JuliaBox](https://juliabox.com/) for a distant use
 - vOptSolver is free, open source under [GPL] licence, tested with Julia 0.6 on macOS and linux-Ubuntu
 
-### Installation Instructions
-For a local use, a working version of:
-- Julia must be ready; instructions for the installation are available [here](https://julialang.org/downloads/)
-- your favorite MILP solver must be ready (mandatory for dealing with non-structured problems; GLPK is suggested); 
-  instructions for the installation are available [here](http://jump.readthedocs.io/en/latest/installation.html)
+### Installation and usage Instructions
+Refer to the instructions provided for vOptSpecific and vOptGeneric.
 
-Before your first local or distant use, run Julia and when the terminal is ready, add as follow the two mandatory packages to your Julia distribution: 
-
-
-```
-julia> Pkg.add("JuMP")
-julia> Pkg.clone("vOptSolver")
-```
-
-That's all folk! 
-
-### Usage Instructions
-
-Install it, and then have fun with vOptSolver. 
-
-Resources availables:
-
-- [Examples](https://github.com/xgandibleux/vOptSolver/tree/master/examples/): 
-    - problems ready to be solved
-- [Documentation](https://github.com/xgandibleux/vOptSolver/tree/master/doc/): 
-    - description of the Application Programming Interface 
 
 ## References
 
