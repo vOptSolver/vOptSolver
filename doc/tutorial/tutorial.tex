@@ -1384,13 +1384,13 @@ $$
 {\scriptsize
 \begin{verbatim}
 # --- create a MOMILP and set the model ---
-  MOMILP = Model(solver=<working on it>) 
+  MOMILP = vModel(solver=<working on it>) 
   @variable(MOMILP, x1 >= 0)
   @variable(MOMILP, x2 >= 0, Int)
-  @objective(MOMILP, Min, c11*x1 + c12*x1)
+  @addObjective(MOMILP, Min, c11*x1 + c12*x1)
   @addObjective(MOMILP, Min, c21*x1 + c22*x1)  
-  @addConstraint(MOMILP, t11*x1 + t12*x2 <= d1)
-  @addConstraint(MOMILP, t21*x1 + t22*x2 <= d2)
+  @constraint(MOMILP, t11*x1 + t12*x2 <= d1)
+  @constraint(MOMILP, t21*x1 + t22*x2 <= d2)
 \end{verbatim}  
 }
 %%
@@ -1398,13 +1398,13 @@ $$
 {\scriptsize
 \begin{verbatim}
 # --- create a MOLP and set the model ---
-  MOLP = Model(solver=<working on it>) 
+  MOLP = vModel(solver=<working on it>) 
   @variable(MOMILP, x1 >= 0)
   @variable(MOMILP, x2 >= 0)
-  @objective(MOLP, Min, c11*x1 + c12*x1)
+  @addObjective(MOLP, Min, c11*x1 + c12*x1)
   @addObjective(MOLP, Min, c21*x1 + c22*x1)  
-  @addConstraint(MOLP, t11*x1 + t12*x2 <= d1)
-  @addConstraint(MOLP, t21*x1 + t22*x2 <= d2)
+  @constraint(MOLP, t11*x1 + t12*x2 <= d1)
+  @constraint(MOLP, t21*x1 + t22*x2 <= d2)
 \end{verbatim}  
 }
 %%
@@ -1412,13 +1412,13 @@ $$
 {\scriptsize
 \begin{verbatim}
 # --- create a MOIP and set the model ---
-  MOIP = Model(solver=GLPKSolverMIP()) 
+  MOIP = vModel(solver=GLPKSolverMIP()) 
   @variable(MOIP, x1 >= 0, Int)
   @variable(MOIP, x2 >= 0, Int)
-  @objective(MOIP, Min, c11*x1 + c12*x1)
+  @addObjective(MOIP, Min, c11*x1 + c12*x1)
   @addObjective(MOIP, Min, c21*x1 + c22*x1)  
-  @addConstraint(MOIP, t11*x1 + t12*x2 <= d1)
-  @addConstraint(MOIP, t21*x1 + t22*x2 <= d2)
+  @constraint(MOIP, t11*x1 + t12*x2 <= d1)
+  @constraint(MOIP, t21*x1 + t22*x2 <= d2)
 \end{verbatim}  
 }
 
@@ -1474,6 +1474,10 @@ t21 =  3   ;  t22 = -1   ;  d2 = 6
            \medskip
 %\end{itemize}
 
+\blue{writeMOP}\\
+  Write a model according to the MOP format to a file \texttt{fname} \\
+           \texttt{\blue{writeMOP}( vModel , fname )}  
+
 \vspace{5mm}
 NB: the MOP format is an extension of \\
 \smallskip
@@ -1518,10 +1522,10 @@ Solver: GLPK or CPLEX\\
 {\scriptsize
 \begin{verbatim}  
 # --- solve the model ---
-  status = solve(MOMILP)
+  status = solve( MOMILP )
   
-# --- Get the results ---
-  writeMOP( MOMILP , " mixed " )
+# --- Print the results ---
+  print_X_E( MOMILP )
 \end{verbatim}
 }
 \vspace{5mm}
@@ -1530,10 +1534,10 @@ Solver: GLPK or CPLEX\\
 {\scriptsize
 \begin{verbatim}  
 # --- solve the model ---
-  status = solve(MOLP)
-  
-# --- Get the results ---
-  writeMOP( MOLP , " continuous " )
+  status = solve( MOLP )
+
+# --- Print the results ---
+  print_X_E( MOLP )
 \end{verbatim}
 }
 \vspace{5mm}
@@ -1542,10 +1546,13 @@ Solver: GLPK or CPLEX\\
 {\scriptsize
 \begin{verbatim}  
 # --- solve the model ---
-  status = solve(MOIP)
+  status = solve( MOIP , method =:epsilon , step = 0.5 )
+  
+# --- Print the results ---
+  print_X_E( MOIP )
   
 # --- Get the results ---
-  writeMOP( MOIP , " integer " )
+  getY_N( MOIP )  
 \end{verbatim}
 }
 
@@ -1657,7 +1664,7 @@ $1\mid . \mid (\Sigma C_i,T_{max}) \rightarrow Y_{N}$}  \vspace{2mm}\\
 %\draw[dashed,thin] (7,2.5) -- (10,2.5);
 \node [text width=3cm,text centered] at (8.5,3.6) {\scriptsize{\textbf{Utils}  \vspace{1mm}\\ 
 \textit{Input/Output}  \vspace{1mm}\\
-read format MOP\vspace{0mm}\\ 
+read/write format MOP\vspace{0mm}\\ 
 plot $Y_N$ \vspace{2mm}\\ 
 % \vspace{2mm}\\ 
 \textit{Misc}  \vspace{1mm}\\
@@ -1782,7 +1789,7 @@ Previously:
 %
 % ================================================================
 % 
-\begin{frame}{Follow/joint us here}
+\begin{frame}{Follow/join us here}
 
 
 %\end{center}

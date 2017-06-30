@@ -145,9 +145,9 @@ C2 = [ 16   5   6  19  12 ;
           Set up the solver to use for the 2-LAP\\
           \texttt{solver = LAP\_Przybylski2008( ) }
           \medskip
-\item  \blue{solveMOP}\\
+\item  \blue{vSolve}\\
           Solve the instance provided with the mentioned solver and return the results \\
-          \texttt{z1, z2, $\sigma$ = solveMOP( id , solver ) }
+          \texttt{z1, z2, $\sigma$ = vSolve( id , solver ) }
 %          \medskip
 %\item  \blue{get\red{2}LAP}\\
 %          Retrieve   \\
@@ -164,20 +164,20 @@ C2 = [ 16   5   6  19  12 ;
 Valid for 2-LAP.
 \bigskip
 
-solveMOP returns:
+vSolve returns:
 \medskip
                            \begin{itemize}
                             %  \item $CPUt$: \\ the time consumed
 %                              \item $nYn$: \\ the number of non-dominated points
-                              \item z1: vector of $1\dots \mid Y_N \mid $ of integers
-                              \item z2: vector of $1\dots \mid Y_N \mid $ of integers
-                              \item $\sigma$: vector of $1,\dots, \mid Y_N \mid $ of  ($\sigma_1, \dots, \sigma_n$)
+                              \item z1: vector of ($1, \dots, \mid Y_N \mid $) of integers
+                              \item z2: vector of ($1,\dots, \mid Y_N \mid $) of integers
+                              \item $\sigma$: matrix of ($1,\dots, \mid Y_N \mid $ ; $\sigma_1, \dots, \sigma_n$) of integers
                                                                                          
 %                              $$ z_1, z_2, \sigma_1, \dots, \sigma_n$$
                               where
                                \begin{itemize}
 %                                     \item $z_k, \ k=1,\dots,p$ of integers:  performances 
-                                     \item $\sigma_i (\ i=1,\dots,n$): integer;  a permutation coding ($x_{ij}=1 \Leftrightarrow \sigma_i=j$)
+                                     \item $\sigma_i$:  a permutation coding ($x_{ij}=1 \Leftrightarrow \sigma_i=j$)
                                 \end{itemize}
                            \end{itemize}               
 
