@@ -727,9 +727,10 @@ Choose between:\\
 \end{enumerate}
 \medskip
 
-\item Before the first use of \texttt{vOptSolver}, add both following packages:
+\item Before the first use of \texttt{vOptSolver}, add the following packages:
 \begin{enumerate}
   \item when the prompt \textit{julia} is ready, type in the terminal \\ 
+     \green{\texttt{Pkg.add("{GLPK}")}}  
      \green{\texttt{Pkg.clone("\url{http://github.com/vOptSolver/vOptGeneric.jl}")}}\\
      \green{\texttt{Pkg.clone("{http://github.com/vOptSolver/vOptSpecific.jl}")}}
      \green{\texttt{Pkg.build("{vOptSpecific}")}}     
@@ -769,6 +770,7 @@ At this point, Julia and GLPK are properly installed\medskip
 \item Before the first use of \texttt{vOptSolver}, add both following packages:
 \begin{enumerate}
   \item when the prompt {julia} is ready, type in the console \\ 
+     \green{\texttt{Pkg.add("{GLPK}")}}    
      \green{\texttt{Pkg.clone("\url{http://github.com/vOptSolver/vOptGeneric.jl}")}}\\
      \green{\texttt{Pkg.clone("{http://github.com/vOptSolver/vOptSpecific.jl}")}}
      \green{\texttt{Pkg.build("{vOptSpecific}")}}         
@@ -1385,7 +1387,7 @@ $$
   MOMILP = Model(solver=<working on it>) 
   @variable(MOMILP, x1 >= 0)
   @variable(MOMILP, x2 >= 0, Int)
-  @setObjective(MOMILP, Min, c11*x1 + c12*x1)
+  @objective(MOMILP, Min, c11*x1 + c12*x1)
   @addObjective(MOMILP, Min, c21*x1 + c22*x1)  
   @addConstraint(MOMILP, t11*x1 + t12*x2 <= d1)
   @addConstraint(MOMILP, t21*x1 + t22*x2 <= d2)
@@ -1399,7 +1401,7 @@ $$
   MOLP = Model(solver=<working on it>) 
   @variable(MOMILP, x1 >= 0)
   @variable(MOMILP, x2 >= 0)
-  @setObjective(MOLP, Min, c11*x1 + c12*x1)
+  @objective(MOLP, Min, c11*x1 + c12*x1)
   @addObjective(MOLP, Min, c21*x1 + c22*x1)  
   @addConstraint(MOLP, t11*x1 + t12*x2 <= d1)
   @addConstraint(MOLP, t21*x1 + t22*x2 <= d2)
@@ -1413,7 +1415,7 @@ $$
   MOIP = Model(solver=GLPKSolverMIP()) 
   @variable(MOIP, x1 >= 0, Int)
   @variable(MOIP, x2 >= 0, Int)
-  @setObjective(MOIP, Min, c11*x1 + c12*x1)
+  @objective(MOIP, Min, c11*x1 + c12*x1)
   @addObjective(MOIP, Min, c21*x1 + c22*x1)  
   @addConstraint(MOIP, t11*x1 + t12*x2 <= d1)
   @addConstraint(MOIP, t21*x1 + t22*x2 <= d2)
@@ -1446,32 +1448,38 @@ t21 =  3   ;  t22 = -1   ;  d2 = 6
 %
 % ================================================================
 % 
-\begin{frame}[fragile=singleslide]{MOMILP-MOLP-MOIP $\mid$ Data $\mid$ Example (text file; format MOP)}
+\begin{frame}[fragile=singleslide]{MOMILP-MOLP-MOIP $\mid$ Data $\mid$ Example (format MOP)}
 
 \begin{columns}
 \begin{column}{0.3\textwidth}
 {\small
-\begin{verbatim}
-\red{a ecrire}
-\end{verbatim}
+%\begin{verbatim}
+%\red{a ecrire}
+%\end{verbatim}
 }
 \end{column}
 \begin{column}{0.3\textwidth}
-\red{a ecrire}
+%\red{a ecrire}
 \end{column}
 \begin{column}{0.15\textwidth}
 \end{column}
 \end{columns}
 
-\vspace{10mm}
-\begin{itemize}
-\item  \red{load2MOP}\\
-          Load an instance of a 2-MOP from the file \texttt{fname}    \\
-           \texttt{jumpModel  = \texttt{\red{load2MOP}( fname ) }} 
+\vspace{5mm}
+%\begin{itemize}
+%\item  
+\blue{parseMOP}\\
+          Load an instance (MOP format) from the file \texttt{fname}    \\
+           \texttt{jumpModel  = \texttt{\blue{parseMOP}( fname , solver=<solver to invoke> ) }} 
            \medskip
-\end{itemize}
+%\end{itemize}
 
-(dire un jumpmodel)
+\vspace{5mm}
+NB: the MOP format is an extension of \\
+\smallskip
+\quad the MPS format\\ \qquad (\url{https://en.wikipedia.org/wiki/MPS_(format)})\\
+\smallskip
+\quad  to multiple objectives\\ \qquad (\url{http://moplib.zib.de/format_desc/mop_format.pdf})
 \end{frame}
 
 %
@@ -1487,21 +1495,21 @@ MOMILP\\
 Algorithm: branch\&bound\\
 Solver: \grey{working on it}\\
 }
-\vspace{17mm}
+\vspace{15mm}
 %%
 MOLP\\
 {\scriptsize
 Algorithm: parametric simplex\\
 Solver: \grey{working on it}\\
 }
-\vspace{17mm}
+\vspace{15mm}
 %%
 MOIP\\
 {\scriptsize
 Algorithm: $\epsilon$-constraint\\
 Solver: GLPK or CPLEX\\
 }
-\vspace{3mm}
+%\vspace{3mm}
 \end{column}
 %%
 %%
@@ -1511,36 +1519,33 @@ Solver: GLPK or CPLEX\\
 \begin{verbatim}  
 # --- solve the model ---
   status = solve(MOMILP)
+  
 # --- Get the results ---
-  println("z1  = ", getObjectiveValue(MOMILP))
-  println("x1 = ", getvalue(x1))
-  println("x2 = ", getvalue(x2))
+  writeMOP( MOMILP , " mixed " )
 \end{verbatim}
 }
-\vspace{3mm}
+\vspace{5mm}
 %%
 %%
 {\scriptsize
 \begin{verbatim}  
 # --- solve the model ---
   status = solve(MOLP)
+  
 # --- Get the results ---
-  println("z1  = ", getObjectiveValue(MOLP))
-  println("x1 = ", getvalue(x1))
-  println("x2 = ", getvalue(x2))
+  writeMOP( MOLP , " continuous " )
 \end{verbatim}
 }
-\vspace{3mm}
+\vspace{5mm}
 %%
 %%
 {\scriptsize
 \begin{verbatim}  
 # --- solve the model ---
   status = solve(MOIP)
+  
 # --- Get the results ---
-  println("z1  = ", getObjectiveValue(MOIP))
-  println("x1 = ", getvalue(x1))
-  println("x2 = ", getvalue(x2))
+  writeMOP( MOIP , " integer " )
 \end{verbatim}
 }
 
@@ -1557,35 +1562,35 @@ Solver: GLPK or CPLEX\\
 
 $Y_N$ of the 2-MOP is defined by 
 \begin{itemize}
-  \item 2-MILP: a mixed nondominated set (composed of edges that are either closed, half-open, open or reduced to a point)
-  \item 2-LP: a continuous nondominated set (composed of edges)
+  \item \grey{2-MILP: a mixed nondominated set (composed of edges that are either closed, half-open, open or reduced to a point)}
+  \item \grey{2-LP: a continuous nondominated set (composed of edges)}
   \item 2-IP: a discrete nondominated set (composed of points)
 \end{itemize}  
 
-with respect to this format:
-
-\medskip
-                           \begin{itemize}
-                              \item $CPUt$: \\ the time consumed\\
-                              \red{a ecrire}
-%                              \item $nYn$: \\ the number of non-dominated points
-%                              \item $Yn$: \\the list of points,  each point is defined by 
-%                              $$ z_1, z_2, \sigma_1, \dots, \sigma_n$$
-%                              where
-%                               \begin{itemize}
-%                                     \item $z_k, \ k=1,\dots,p$ of integers:  performances 
-%                                     \item $\sigma_i, \ i=1,\dots,n$ of integers:  permutation coding ($x_{ij}=1 \Leftrightarrow \sigma_i=j$)
-%                                \end{itemize}
-                           \end{itemize}               
+%with respect to this format:
+%
+%\medskip
+%                           \begin{itemize}
+%                              \item $CPUt$: \\ the time consumed\\
+%                              \red{a ecrire}
+%%                              \item $nYn$: \\ the number of non-dominated points
+%%                              \item $Yn$: \\the list of points,  each point is defined by 
+%%                              $$ z_1, z_2, \sigma_1, \dots, \sigma_n$$
+%%                              where
+%%                               \begin{itemize}
+%%                                     \item $z_k, \ k=1,\dots,p$ of integers:  performances 
+%%                                     \item $\sigma_i, \ i=1,\dots,n$ of integers:  permutation coding ($x_{ij}=1 \Leftrightarrow \sigma_i=j$)
+%%                                \end{itemize}
+%                           \end{itemize}               
 
 \end{frame}
 
 %
 % ================================================================
 % 
-\begin{frame}{MOMILP-MOLP-MOIP $\mid$ Resolution $\mid$ Outputs (text file)}
-\red{a ecrire}
-\end{frame}
+%\begin{frame}{MOMILP-MOLP-MOIP $\mid$ Resolution $\mid$ Outputs (text file)}
+%\red{a ecrire}
+%\end{frame}
 
 %
 % ================================================================
@@ -1708,7 +1713,7 @@ analyze $Y_N$\\
 \begin{itemize}
   \item v1.0: July 2016; first prototype; not opened to the public
     \medskip
-  \item v2.0: July 23, 2017; first stable version;  released to the public with
+  \item v2.0: June 23, 2017; first stable version;  released to the public with
     \begin{itemize}
        \item a depot on github, webpages, and an user documentation    
        \item JuMP extended to multiple objectives (vOptGeneric)
@@ -1777,32 +1782,51 @@ Previously:
 %
 % ================================================================
 % 
-\begin{frame}{Links and contact}
+\begin{frame}{Follow/joint us here}
 
-\begin{itemize}
-\item Homepage of the ANR/DFG research project ``vOpt'': \\
+
+%\end{center}
+
+{
+%\begin{itemize}
+%\item 
+%\item 
+
+Homepage of vOptSolver:\\
+         \url{http://voptsolver.github.io/vOptSolver/}
+%\item 
+\medskip
+
+\quad Repository of vOptSolver:\\
+\quad         \url{http://github.com/vOptSolver}
+         
+\quad Repository of vOptSpecific:\\
+\quad         \url{http://github.com/vOptSolver/vOptSpecific.jl}
+%\item 
+
+\quad Repository of vOptGeneric:\\
+\quad         \url{http://github.com/vOptSolver/vOptGeneric.jl}              
+%\vspace{4mm}
+
+\medskip
+%\item Homepage of Julia language:\\
+%         \url{http://julialang.org}
+%\item Homepage of GLPK:\\
+%         \url{http://www.gnu.org/software/glpk/}     
+%\bigskip
+
+
+%\item 
+Contact concerning vOptSolver:\\
+         \texttt{vopt@univ-nantes.fr}  \\
+%\end{itemize}
+\vspace{4mm}
+
+Homepage of the ANR/DFG research project ``vOpt'': \\
          \url{http://vopt-anr-dfg.univ-nantes.fr}
-         \bigskip
-\item Repository of vOptSolver:\\
-         \url{http://github.com/vOptSolver}
-\item Homepage of vOptSpecific:\\
-         \url{http://voptsolver.github.io/vOptSpecific/}
-\item Homepage of vOptGeneric:\\
-         \url{http://voptsolver.github.io/vOptGeneric/}              
-
-\bigskip
 
 
-\item Homepage of Julia language:\\
-         \url{http://julialang.org}
-\item Homepage of GLPK:\\
-         \url{http://www.gnu.org/software/glpk/}     
-\bigskip
-
-
-\item Contact concerning vOptSolver:\\
-         \texttt{vopt@univ-nantes.fr}  
-\end{itemize}
+}
 
 \end{frame}
 
