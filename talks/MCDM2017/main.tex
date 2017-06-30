@@ -641,9 +641,9 @@ $X_E \subseteq \mN^n$, $Y_N \subseteq \Z^2$
 {\footnotesize
 \begin{verbatim}
 using vOptSpecific   
-id = set2LAP( n , C1 , C2 )
+m = set2LAP( n , C1 , C2 )
 solver = LAP_Przybylski2008( ) 
-z1, z2, S = solveMOP( id , solver ) 
+z1, z2, S = vSolve( m , solver ) 
 \end{verbatim}
 }          
 \end{column}
@@ -685,13 +685,13 @@ $X_E \subseteq \mN^n$, $Y_N \subseteq \Z^2$
 \begin{verbatim}
 using vOptGeneric
 using GLPK
-m = Model( solver = GLPKSolverLP() )
+m = vModel( solver = GLPKSolverLP() )
 @addVar( m , x[1:N,1:N]  >= 0 )
-@addConstraint( m , cols[i=1:N], sum{x[i,j], j=1:N} == 1 )
-@addConstraint( m , rows[j=1:N], sum{x[i,j], i=1:N} == 1 )
 @addObjective( m , Min, sum{ C1[i,j]*x[i,j], i=1:N,j=1:N } )
 @addObjective( m , Min, sum{ C2[i,j]*x[i,j], i=1:N,j=1:N } )
-@time solve( m , method = :eps , step = 0.5 )
+@constraint( m , cols[i=1:N], sum{x[i,j], j=1:N} == 1 )
+@constraint( m , rows[j=1:N], sum{x[i,j], i=1:N} == 1 )
+@time solve( m , method = :epsilon , step = 0.5 )
 \end{verbatim}
 }
           
@@ -836,7 +836,7 @@ N.A: not available (timeout of 180s)
 % ================================================================
 % ================================================================
 
-\begin{frame}{Follow/joint us here}
+\begin{frame}{Follow/join us here}
 
 
 %\end{center}
