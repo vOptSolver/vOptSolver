@@ -1,0 +1,191 @@
+%
+% ================================================================
+% 
+\begin{frame}{\textbf{LAP} $\mid$ Definition $\mid$ The linear assignment problem}
+
+    
+    \begin{center}
+$
+\quad
+\left [
+\begin{array}{lcllllll}
+
+\ &  \min z^k & =  & \displaystyle{\sum_{i=1}^{n}\sum_{j=1}^{n} c^k_{ij} x_{ij}}  & & k=1,\dots,p\vspace{2mm} \\
+
+ & s/c  & &   \displaystyle{\sum_{i=1}^{n}  x_{ij}}   =  1 & \ &  j=1,\dots ,n \  \ \  \\
+  &       & &   \displaystyle{\sum_{j=1}^{n}  x_{ij}}   =  1 & & i=1,\dots ,n \    \vspace{2mm} \\
+
+ & & &  x_{ij} = (0,1) &&   i=1,\dots ,n  \vspace{-1mm}\\
+ & & &   & & j=1,\dots ,n\\ 
+ 
+\end{array}
+\right ]
+$ \hfill (p-LAP)
+\end{center}
+\end{frame}
+
+%
+% ================================================================
+% 
+\begin{frame}{LAP $\mid$ Definition $\mid$ Inputs}
+
+Valid for 2-LAP.
+\bigskip
+
+              \begin{itemize}
+                \item \texttt{n} (integer): \\ number $n$ of assignments task-resource 
+                           \medskip
+                %\item \texttt{p} (integer): \\ number $p$ of objectives, $k=1\dots p$                  
+                \item \texttt{C1} (matrix of $n \times n$ of integers): \\  coefficients $c^1_{ij}$ of the objective 1  
+                           \medskip
+                \item \texttt{C2} (matrix of $n \times n$ of integers): \\  coefficients $c^2_{ij}$ of the objective 2                                         
+              \end{itemize}
+\end{frame}
+
+%
+% ================================================================
+% 
+\begin{frame}[fragile=singleslide]{LAP $\mid$ Data $\mid$ Example (console)}
+
+{\small
+\begin{verbatim}
+n  =  5
+
+C1 = [  3   9   0   0   6 ;
+       16   0   6  12  19 ;
+        2   7  11  15   8 ;
+        4  11   7  16   3 ;
+        2   5   1   9   0   ]
+
+C2 = [ 16   5   6  19  12 ;
+       15   7  13   7   7 ;
+        1   2  13   2   3 ;
+       14   7   8   1   7 ;
+       10  10   1   0   0   ]
+\end{verbatim}
+}
+
+\end{frame}
+
+%
+% ================================================================
+% 
+\begin{frame}[fragile=singleslide]{LAP $\mid$ Data $\mid$ Example (text file)}
+
+\begin{columns}
+\begin{column}{0.3\textwidth}
+{\small
+\begin{verbatim}
+5
+ 3   9   0   0   6 
+16   0   6  12  19 
+ 2   7  11  15   8 
+ 4  11   7  16   3 
+ 2   5   1   9   0   
+16   5   6  19  12 
+15   7  13   7   7 
+ 1   2  13   2   3 
+14   7   8   1   7 
+10  10   1   0   0 
+\end{verbatim}
+}
+\end{column}
+\begin{column}{0.3\textwidth}
+\vspace{-2mm}
+%\begin{center}
+\hspace{-5mm}
+\begin{tikzpicture}[scale=0.625]%[auto]
+
+\draw  [<->, color=blue](0,-1) -- (0,1.85);
+\draw  [<->, color=blue](0,2.10) -- (0,5.0);
+\draw  [<->, color=blue](0,5.2) -- (0,5.7);
+\node [text width=1cm,align=left, color=blue] at (1.5,5.45) {{\texttt{n}}};
+\node [text width=1cm,align=left, color=blue] at (1.5,3.6) {{\texttt{C1}}};
+\node [text width=1cm,align=left, color=blue] at (1.5,0.5) {{\texttt{C2}}};
+\draw  [-, dotted, color=blue](-1,2) -- (1,2);
+\draw  [-, dotted, color=blue](-1,5.1) -- (1,5.1);
+\end{tikzpicture}
+\vfill
+\end{column}
+\begin{column}{0.15\textwidth}
+
+\end{column}
+\end{columns}
+
+\vspace{10mm}
+\begin{itemize}
+%\item  \blue{createLAP}\\
+%          Create a new instance of a LAP     \\
+%          \texttt{id = createLAP(  ) }
+\item  \blue{load2LAP}\\
+          Load an instance of a 2-LAP from the file \texttt{fname}    \\
+           \texttt{id = \texttt{{load2}LAP( fname ) }} 
+           \medskip
+\end{itemize}
+
+\end{frame}
+
+%
+% ================================================================
+% 
+\begin{frame}{LAP $\mid$ Resolution $\mid$ API}
+
+\begin{itemize}
+%\item  \blue{createLAP}\\
+%          Create a new instance of a LAP     \\
+%          \texttt{id = createLAP(  ) }
+\item  \blue{set2LAP}\\
+          Create a new instance of a 2-LAP and set up all required values    \\
+           \texttt{id = \texttt{{set2}LAP( n , C1, C2 ) }} 
+           \medskip
+%\item  \blue{set2LAP}\\
+%          Set up all required values of a 2-LAP\\
+%          \texttt{set2LAP( id , n , C1, C2 ) } 
+\item  \blue{LAP\_Przybylski2008} \\
+          Set up the solver to use for the 2-LAP\\
+          \texttt{solver = LAP\_Przybylski2008( ) }
+          \medskip
+\item  \blue{solveMOP}\\
+          Solve the instance provided with the mentioned solver and return the results \\
+          \texttt{z1, z2, $\sigma$ = solveMOP( id , solver ) }
+%          \medskip
+%\item  \blue{get\red{2}LAP}\\
+%          Retrieve   \\
+%          \texttt{results = get\red{2}LAP( id ) }         
+\end{itemize}
+
+\end{frame}
+
+%
+% ================================================================
+% 
+\begin{frame}{LAP $\mid$ Resolution $\mid$ Outputs (specification)}
+
+Valid for 2-LAP.
+\bigskip
+
+solveMOP returns:
+\medskip
+                           \begin{itemize}
+                            %  \item $CPUt$: \\ the time consumed
+%                              \item $nYn$: \\ the number of non-dominated points
+                              \item z1: vector of $1\dots \mid Y_N \mid $ of integers
+                              \item z2: vector of $1\dots \mid Y_N \mid $ of integers
+                              \item $\sigma$: vector of $1,\dots, \mid Y_N \mid $ of  ($\sigma_1, \dots, \sigma_n$)
+                                                                                         
+%                              $$ z_1, z_2, \sigma_1, \dots, \sigma_n$$
+                              where
+                               \begin{itemize}
+%                                     \item $z_k, \ k=1,\dots,p$ of integers:  performances 
+                                     \item $\sigma_i (\ i=1,\dots,n$): integer;  a permutation coding ($x_{ij}=1 \Leftrightarrow \sigma_i=j$)
+                                \end{itemize}
+                           \end{itemize}               
+
+\end{frame}
+
+%
+% ================================================================
+% 
+%\begin{frame}{LAP $\mid$ Resolution $\mid$ Outputs (text file)}
+%\red{a ecrire}
+%\end{frame}
