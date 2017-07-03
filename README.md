@@ -65,8 +65,8 @@ July 17-21, 2017 Quebec City, Canada.
     -  MILP: Mixed Integer Linear Program
     -  ILP: Integer Linear Program 
 - vOptSpecific: Multiobjective structured problems / Application Programming Interface (API),
-    -  OSP: One machine Scheduling Problem
     -  LAP: Linear Assignment Problem 
+    -  [OSP: One machine Scheduling Problem]
     -  [UKP, MKP, UDFLP, SSCFLP, UMFLP, CFLP, PATHS]
 
 ### Algorithms
@@ -75,10 +75,10 @@ The solving algorithms included compute an exact complete set of non-dominated p
     - Haimes1971: epsilon-constraint method / 2ILP (Julia+JuMP)
     - [Aneja1979: Aneja & Nair method / 2ILP]
     - [Chalmet1986: Chalmet et al. method / 2ILP]
-    - [Vincent2013: branch-and-cut / 2MILP]
+    - [Vincent2013: branch-and-bound / 2MILP]
 - vOptSpecific: specific algorithms for structured (MOCO/MOMILP) problem,
-    - Wassenhove1980: 2OSP1980 (Julia)
     - Przybylski2008: 2LAP2008 (C)
+    - [Wassenhove1980: 2OSP1980 (Julia)]
     - [Jorge2010: 2UKP2010 (C++); Gandibleux2012: 2UDFLP2012 (C++); Delmee2017: 2UMFLP2016 (C++); Gandibleux2006: PATHS (C)]
 - Algorithms and datastructures for handling non-dominated points: 
     - [AVL2016/2ILP (Julia)]
@@ -168,9 +168,11 @@ Terms and acronyms used
 - LP: Linear Program
 - MILP: Mixed Integer Linear Program
 - IP: Integer linear program
-- MOCO: MultiObjective Combinatorial Optimization
+- CO: Combinatorial Optimization
+- MOLP: MultiObjective linear program
+- MOIP: MultiObjective Integer linear program
 - MOMILP: MultiObjective Mixed Integer Linear Program
-- MOP: MultiObjective Program
+- MOCO: MultiObjective Combinatorial Optimization
 - OSP: One machine Scheduling Problem
 - LAP: Linear Assignment Problem
 - UKP: Unidimensional 01 Knapsack Problem
@@ -189,6 +191,7 @@ Terms and acronyms used
 - GLPK: stands for GNU Linear Programming Kit, an open source solver
 - CPLEX: a commercial solver
 - GUROBI: a commercial solver
+- MOP: MultiObjective extension of MPS format
 
 
 
