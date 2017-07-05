@@ -1323,7 +1323,7 @@ Following spectifications of JuMP for formulating a model, see:
 Plus:
 
 \begin{itemize}
-  \item \texttt{@addObjective( <model>, <opt>, <function>)}\bigskip\\
+  \item \texttt{@addobjective( <model>, <opt>, <function>)}\bigskip\\
 
   where 
   \begin{itemize}
@@ -1387,8 +1387,8 @@ $$
   MOMILP = vModel(solver=<working on it>) 
   @variable(MOMILP, x1 >= 0)
   @variable(MOMILP, x2 >= 0, Int)
-  @addObjective(MOMILP, Min, c11*x1 + c12*x1)
-  @addObjective(MOMILP, Min, c21*x1 + c22*x1)  
+  @addobjective(MOMILP, Min, c11*x1 + c12*x2)
+  @addobjective(MOMILP, Min, c21*x1 + c22*x2)  
   @constraint(MOMILP, t11*x1 + t12*x2 <= d1)
   @constraint(MOMILP, t21*x1 + t22*x2 <= d2)
 \end{verbatim}  
@@ -1401,8 +1401,8 @@ $$
   MOLP = vModel(solver=<working on it>) 
   @variable(MOMILP, x1 >= 0)
   @variable(MOMILP, x2 >= 0)
-  @addObjective(MOLP, Min, c11*x1 + c12*x1)
-  @addObjective(MOLP, Min, c21*x1 + c22*x1)  
+  @addobjective(MOLP, Min, c11*x1 + c12*x2)
+  @addobjective(MOLP, Min, c21*x1 + c22*x2)  
   @constraint(MOLP, t11*x1 + t12*x2 <= d1)
   @constraint(MOLP, t21*x1 + t22*x2 <= d2)
 \end{verbatim}  
@@ -1415,8 +1415,8 @@ $$
   MOIP = vModel(solver=GLPKSolverMIP()) 
   @variable(MOIP, x1 >= 0, Int)
   @variable(MOIP, x2 >= 0, Int)
-  @addObjective(MOIP, Min, c11*x1 + c12*x1)
-  @addObjective(MOIP, Min, c21*x1 + c22*x1)  
+  @addobjective(MOIP, Min, c11*x1 + c12*x2)
+  @addobjective(MOIP, Min, c21*x1 + c22*x2)  
   @constraint(MOIP, t11*x1 + t12*x2 <= d1)
   @constraint(MOIP, t21*x1 + t22*x2 <= d2)
 \end{verbatim}  
