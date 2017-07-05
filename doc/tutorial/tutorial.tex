@@ -182,8 +182,8 @@ Convention: \grey{text in grey} $\Rightarrow$ functionality integrated in future
 \item IP: Integer Linear program
 \item CO: Combinatorial Optimization
 \item LAP: Linear Assignment Problem
-\grey{
 \item OSP: One machine Scheduling Problem
+\grey{
 \item UKP: Unidimensional 01 Knapsack Problem
 \item MKP: Multidimensional 01 Knapsack Problem
 \item UFLP: Uncapacitated Facility Location Problem
@@ -220,7 +220,7 @@ Convention: \grey{text in grey} $\Rightarrow$ functionality integrated in future
           child { node {\orange{UMFLP}}}
           }
         child [color = black!25]{ node {PATHS}}
-        child [color = black!25]{ node {OSP}}
+        child [color = black]{ node {OSP}}
         child [color = black!25]{ node {UKP}}        
         child { node {LAP}}
     }
@@ -338,7 +338,7 @@ More on definitions and notations, refer to this book:
 
 \draw [->, color=blue] (3.5,10.5) -- (4.85,10.5);
 \node [text width=2cm,align=right, color=blue] at (1.5,10.6) {
-{\tiny 2-LAP \\ \grey{2-OSP} \\ \grey{2-UDFLP} \\ \grey{2-UMFLP} \\ \grey{2-UKP} \\ \grey{$p$-PATHS} \\}
+{\tiny 2-LAP \\ {2-OSP} \\ \grey{2-UDFLP} \\ \grey{2-UMFLP} \\ \grey{2-UKP} \\ \grey{$p$-PATHS} \\}
 };
 
 \draw [fill=blue!20] (9,10) rectangle (12,11);
@@ -394,7 +394,7 @@ More on definitions and notations, refer to this book:
 
 \draw [->, color=blue] (3.5,4) -- (3.85,4);
 \node [text width=2cm,align=right, color=blue] at (1.5,4) {
-{\tiny 2-LAP[prz2008] \\ \grey{2-OSP[was1980]} \\ \grey{2-UDFLP[gan2012]} \\ \grey{2-UMFLP[del2017]} \\ \grey{2-UKP} \\ \grey{$p$-PATHS} \\}
+{\tiny 2-LAP[prz2008] \\ {2-OSP[was1980]} \\ \grey{2-UDFLP[gan2012]} \\ \grey{2-UMFLP[del2017]} \\ \grey{2-UKP} \\ \grey{$p$-PATHS} \\}
 };
 
 \draw [fill=blue!20] (4,3) rectangle (8,5);
@@ -457,7 +457,7 @@ More on definitions and notations, refer to this book:
          output: $X_E \subseteq \mN^n$, $Y_N \subseteq \Z^p$
          \medskip
 
-\item \grey{2-OSP with here $1\mid . \mid (\Sigma C_i,T_{max})$  [was1980]; in Julia:\vspace{1mm}\\
+\item {2-OSP with here $1\mid . \mid (\Sigma C_i,T_{max})$  [was1980]; in Julia:\vspace{1mm}\\
          {\tiny L.N. Van Wassenhove and L.F. Gelders. Solving a bicriterion scheduling problem. 
          \textit{European Journal of Operational Research}, 4(1):42--48, 1980.\\}
          output: $X_E \subseteq \mN^n$, $Y_N \subseteq \Z^p$
@@ -1036,7 +1036,7 @@ When vOptSolver is properly installed, vOptSpecific and vOptGeneric are ready lo
 % ================================================================
 % 
 
-%\input{2OSP.tex}
+\input{2OSP.tex}
 %
 %\begin{frame}{\textbf{OSP} $\mid$ Definition $\mid$ One machine scheduling problem}
 %
@@ -1470,13 +1470,13 @@ t21 =  3   ;  t22 = -1   ;  d2 = 6
 %\item  
 \blue{parseMOP}\\
           Load an instance (MOP format) from the file \texttt{fname}    \\
-           \texttt{jumpModel  = \texttt{\blue{parseMOP}( fname , solver=<solver to invoke> ) }} 
+           \texttt{jumpModel  = \texttt{{parseMOP}( fname , solver=<solver to invoke> ) }} 
            \medskip
 %\end{itemize}
 
 \blue{writeMOP}\\
   Write a model according to the MOP format to a file \texttt{fname} \\
-           \texttt{\blue{writeMOP}( vModel , fname )}  
+           \texttt{{writeMOP}( vModel , fname )}  
 
 \vspace{5mm}
 NB: the MOP format is an extension of \\
@@ -1728,7 +1728,8 @@ analyze $Y_N$\\
        \item $\epsilon$-constraint algorithm for bi-objective integer programming       
        \item backbone in Julia (vOptSpecific)
        \item API and solver for bi-objective linear assignment problem
-       \item primitives for I/O of a 2LAP on files    
+       \item API and solver for bi-objective one machine scheduling problem          
+       \item primitives for I/O of a 2LAP and 2OSP on files               
     \end{itemize}  
 \end{itemize}
 
@@ -1759,7 +1760,6 @@ Involved in the development of vOptSolver:\\
 Currently:
 \begin{itemize}
   \item GANDIBLEUX Xavier  (coordinator)
-  \item LUCAS Flavien
   \item SOLEILHAC Gauthier
   \item PRZYBYLSKI Anthony
 \end{itemize}
@@ -1769,6 +1769,7 @@ Previously:
 \begin{itemize}
   \item CHATELLIER Pauline
   \item DUMEZ Dorian  
+  \item LUCAS Flavien  
 \end{itemize}
 \end{frame}
 

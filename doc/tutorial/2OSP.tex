@@ -102,9 +102,9 @@ w = [  1   1   1   1 ]
 
 \vspace{10mm}
 \begin{itemize}
-\item  \red{load2OSP}\\
+\item  \blue{load2OSP}\\
           Load an instance of a 2-OSP from the file \texttt{fname}    \\
-           \texttt{id = \texttt{\red{load2OSP}( fname ) }} 
+           \texttt{id = \texttt{{load2OSP}( fname ) }} 
            \medskip
 \end{itemize}
 
@@ -116,11 +116,11 @@ w = [  1   1   1   1 ]
 \begin{frame}{OSP $\mid$ Resolution $\mid$ API}
 
 \begin{itemize}
-\item  \red{set2OSP}\\
+\item  \blue{set2OSP}\\
           Create a new instance of a 2-OSP and set up all required values    \\
-           \texttt{id = \texttt{\red{set2OSP}( n , P, D, R, W ) }} 
+           \texttt{id = \texttt{{set2OSP}( n , P, D, R, W ) }} 
            \medskip
-\item  \red{OSP\_vanwassenhove1980} \\
+\item  \blue{OSP\_vanwassenhove1980} \\
           Set up the solver to use for the 2-OSP\\
           \texttt{solver = OSP\_vanwassenhove1980( ) }
           \medskip
@@ -143,25 +143,44 @@ w = [  1   1   1   1 ]
 Valid for 2-OSP.
 \bigskip
 
-Non-dominated parts of the 2-LAP is defined by a set of points:
+vSolve returns:
 \medskip
                            \begin{itemize}
-                             % \item $CPUt$: \\ the time consumed
-                              \item $nYn$: \\ the number of non-dominated points
-                              \item $Yn$: \\the list of points,  each point is defined by 
-                              $$ z_1, z_2, \sigma_1, \dots, \sigma_n$$
+                            %  \item $CPUt$: \\ the time consumed
+%                              \item $nYn$: \\ the number of non-dominated points
+                              \item z1: vector of ($1, \dots, \mid Y_N \mid $) of integers
+                              \item z2: vector of ($1,\dots, \mid Y_N \mid $) of integers
+                              \item $\sigma$: matrix of ($1,\dots, \mid Y_N \mid $ ; $\sigma_1, \dots, \sigma_n$) of integers
+                                                                                         
+%                              $$ z_1, z_2, \sigma_1, \dots, \sigma_n$$
                               where
                                \begin{itemize}
-                                     \item $z_k, \ k=1,\dots,p$ of integers:  performances 
-                                     \item $\sigma_i, \ i=1,\dots,n$ of integers:  permutation coding ($\sigma_i=j  \Leftrightarrow \mbox{ job } j \mbox{ in position } i$)
+%                                     \item $z_k, \ k=1,\dots,p$ of integers:  performances 
+                                     \item $\sigma_i$:  a permutation coding ($\sigma_i=j  \Leftrightarrow \mbox{ job } j \mbox{ in position } i$)
                                 \end{itemize}
                            \end{itemize}               
 
 \end{frame}
 
+%Non-dominated parts of the 2-LAP is defined by a set of points:
+%\medskip
+%                           \begin{itemize}
+%                             % \item $CPUt$: \\ the time consumed
+%                              \item $nYn$: \\ the number of non-dominated points
+%                              \item $Yn$: \\the list of points,  each point is defined by 
+%                              $$ z_1, z_2, \sigma_1, \dots, \sigma_n$$
+%                              where
+%                               \begin{itemize}
+%                                     \item $z_k, \ k=1,\dots,p$ of integers:  performances 
+%                                     \item $\sigma_i, \ i=1,\dots,n$ of integers:  permutation coding ($\sigma_i=j  \Leftrightarrow \mbox{ job } j \mbox{ in position } i$)
+%                                \end{itemize}
+%                           \end{itemize}               
+
+
+
 %
 % ================================================================
 % 
-\begin{frame}{OSP $\mid$ Resolution $\mid$ Outputs (text file)}
-\red{a ecrire}
-\end{frame}
+%\begin{frame}{OSP $\mid$ Resolution $\mid$ Outputs (text file)}
+%\red{a ecrire}
+%\end{frame}
