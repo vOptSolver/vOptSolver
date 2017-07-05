@@ -43,10 +43,10 @@ Valid for 2-OSP.
 {\small
 \begin{verbatim}
 n = 4
-p = [  2   4   3   1 ]
-d = [  1   2   4   6 ]
-r = [  0   0   0   0 ]
-w = [  1   1   1   1 ]
+p = [  2 , 4 , 3 , 1 ]
+d = [  1 , 2 , 4 , 6 ]
+r = [  0 , 0 , 0 , 0 ]
+w = [  1 , 1 , 1 , 1 ]
 \end{verbatim}
 }
 
@@ -118,15 +118,15 @@ w = [  1   1   1   1 ]
 \begin{itemize}
 \item  \blue{set2OSP}\\
           Create a new instance of a 2-OSP and set up all required values    \\
-           \texttt{id = \texttt{{set2OSP}( n , P, D, R, W ) }} 
+           \texttt{id = \texttt{{set2OSP}( n , p , d , r , w ) }} 
            \medskip
-\item  \blue{OSP\_vanwassenhove1980} \\
+\item  \blue{OSP\_VanWassenhove1980} \\
           Set up the solver to use for the 2-OSP\\
-          \texttt{solver = OSP\_vanwassenhove1980( ) }
+          \texttt{solver = OSP\_VanWassenhove1980( ) }
           \medskip
 \item  \blue{vSolve}\\
           Solve an instance of a 2OSP with the mentioned solver and return the results \\
-          \texttt{status = vSolve( id , solver ) }
+          \texttt{z1, z2 , $\sigma$ = vSolve( id , solver ) }
           \medskip
 %\item  \red{get2OSP}\\
 %          Retrieve the results  \\
