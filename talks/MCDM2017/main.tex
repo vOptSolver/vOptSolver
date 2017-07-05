@@ -465,7 +465,7 @@ Computing in Operations Research Using Julia.
           child { node {\orange{UMFLP}}}
           }
         child [color = black!25]{ node {PATHS}}
-        child [color = black!25]{ node {OSP}}
+        child [color = black]{ node {OSP}}
         child [color = black!25]{ node {UKP}}        
         child { node {LAP}}
     }
@@ -687,8 +687,8 @@ using vOptGeneric
 using GLPK
 m = vModel( solver = GLPKSolverLP() )
 @addVar( m , x[1:N,1:N]  >= 0 )
-@addObjective( m , Min, sum{ C1[i,j]*x[i,j], i=1:N,j=1:N } )
-@addObjective( m , Min, sum{ C2[i,j]*x[i,j], i=1:N,j=1:N } )
+@addobjective( m , Min, sum{ C1[i,j]*x[i,j], i=1:N,j=1:N } )
+@addobjective( m , Min, sum{ C2[i,j]*x[i,j], i=1:N,j=1:N } )
 @constraint( m , cols[i=1:N], sum{x[i,j], j=1:N} == 1 )
 @constraint( m , rows[j=1:N], sum{x[i,j], i=1:N} == 1 )
 @time solve( m , method = :epsilon , step = 0.5 )
