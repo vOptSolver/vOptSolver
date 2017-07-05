@@ -688,7 +688,7 @@ NB: CPLEX and GUROBI are currently not available on JuliaBox
 vOptSolver has been tested with:
 \begin{itemize}
 \item Julia v0.6
-\item GLPK v4.60
+\item GLPK v4.62
 \end{itemize}
 \bigskip
 
@@ -730,7 +730,7 @@ Choose between:\\
 \item Before the first use of \texttt{vOptSolver}, add the following packages:
 \begin{enumerate}
   \item when the prompt \textit{julia} is ready, type in the terminal \\ 
-     \green{\texttt{Pkg.add("{GLPK}")}}  
+     \green{\texttt{Pkg.add("{GLPK}"); Pkg.add("GLPKMathProgInterface")}}  
      \green{\texttt{Pkg.clone("\url{http://github.com/vOptSolver/vOptGeneric.jl}")}}\\
      \green{\texttt{Pkg.clone("{http://github.com/vOptSolver/vOptSpecific.jl}")}}
      \green{\texttt{Pkg.build("{vOptSpecific}")}}     
@@ -770,7 +770,7 @@ At this point, Julia and GLPK are properly installed\medskip
 \item Before the first use of \texttt{vOptSolver}, add both following packages:
 \begin{enumerate}
   \item when the prompt {julia} is ready, type in the console \\ 
-     \green{\texttt{Pkg.add("{GLPK}")}}    
+     \green{\texttt{Pkg.add("{GLPK}"); Pkg.add("GLPKMathProgInterface")}}    
      \green{\texttt{Pkg.clone("\url{http://github.com/vOptSolver/vOptGeneric.jl}")}}\\
      \green{\texttt{Pkg.clone("{http://github.com/vOptSolver/vOptSpecific.jl}")}}
      \green{\texttt{Pkg.build("{vOptSpecific}")}}         
@@ -802,7 +802,7 @@ When vOptSolver is properly installed, vOptSpecific and vOptGeneric are ready lo
     \begin{enumerate}
       \item    \green{\texttt{using vOptSpecific}}
       \item    \green{\texttt{using vOptGeneric}}
-      \item    \green{\texttt{using GLPK}}            
+      \item    \green{\texttt{using GLPK ; using GLPKMathProgInterface}}            
     \end{enumerate}
     Remark 1: you may invoke only \texttt{using vOptSpecific} if you are only working with  \texttt{vOptSpecific}. Same remark for \texttt{vOptGeneric}.\\
     Remark 2: you may invoke CPLEX or GUROBI in the place of GLPK (ps: in local mode, the MILP solver selected must be properly installed)    
