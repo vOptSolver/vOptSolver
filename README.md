@@ -66,7 +66,7 @@ July 17-21, 2017 Quebec City, Canada.
     -  ILP: Integer Linear Program 
 - vOptSpecific: Multiobjective structured problems / Application Programming Interface (API),
     -  LAP: Linear Assignment Problem 
-    -  [OSP: One machine Scheduling Problem]
+    -  OSP: One machine Scheduling Problem
     -  [UKP, MKP, UDFLP, SSCFLP, UMFLP, CFLP, PATHS]
 
 ### Algorithms
@@ -78,7 +78,7 @@ The solving algorithms included compute an exact complete set of non-dominated p
     - [Vincent2013: branch-and-bound / 2MILP]
 - vOptSpecific: specific algorithms for structured (MOCO/MOMILP) problem,
     - Przybylski2008: 2LAP2008 (C)
-    - [Wassenhove1980: 2OSP1980 (Julia)]
+    - Wassenhove1980: 2OSP1980 (Julia)
     - [Jorge2010: 2UKP2010 (C++); Gandibleux2012: 2UDFLP2012 (C++); Delmee2017: 2UMFLP2016 (C++); Gandibleux2006: PATHS (C)]
 - Algorithms and datastructures for handling non-dominated points: 
     - [AVL2016/2ILP (Julia)]
