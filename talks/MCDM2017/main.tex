@@ -549,9 +549,9 @@ Two modes:\\
 
 \medskip
 \item a local use   \\
-    \quad - on macOS (tested on v10.12.5) \\
-    \quad  - on linux (tested on ubuntu 14.04 LTS)\\
-    \quad  - on windows (perhaps later...)
+    \quad - on macOS\\ \qquad vOptGeneric and vOptSpecific  tested on v10.12.5 \\
+    \quad  - on linux\\ \qquad vOptGeneric and vOptSpecific tested on ubuntu 14.04 LTS\\
+    \quad  - on windows\\ \qquad not tested (vOptGeneric: ready; vOptSpecific: perhaps later...)
 \end{enumerate}
 
 \end{frame}
@@ -685,12 +685,12 @@ $X_E \subseteq \mN^n$, $Y_N \subseteq \Z^2$
 \begin{verbatim}
 using vOptGeneric
 using GLPK ; using GLPKMathProgInterface
-m = vModel( solver = GLPKSolverLP() )
-@addVar( m , x[1:N,1:N]  >= 0 )
-@addobjective( m , Min, sum{ C1[i,j]*x[i,j], i=1:N,j=1:N } )
-@addobjective( m , Min, sum{ C2[i,j]*x[i,j], i=1:N,j=1:N } )
-@constraint( m , cols[i=1:N], sum{x[i,j], j=1:N} == 1 )
-@constraint( m , rows[j=1:N], sum{x[i,j], i=1:N} == 1 )
+m = vModel( solver = GLPKSolverMIP() )
+@variable( m , x[1:n,1:n]  >= 0, Bin )
+@addobjective( m , Min, sum{ C1[i,j]*x[i,j], i=1:n,j=1:n } )
+@addobjective( m , Min, sum{ C2[i,j]*x[i,j], i=1:n,j=1:n } )
+@constraint( m , cols[i=1:n], sum{x[i,j], j=1:n} == 1 )
+@constraint( m , rows[j=1:n], sum{x[i,j], i=1:n} == 1 )
 @time solve( m , method = :epsilon , step = 0.5 )
 \end{verbatim}
 }
