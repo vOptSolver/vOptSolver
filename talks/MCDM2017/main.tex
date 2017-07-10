@@ -431,7 +431,12 @@ More:\\
 \footnotesize{
 Miles Lubin and Iain Dunning:
 Computing in Operations Research Using Julia.
-\textit{INFORMS Journal on Computing} 27:2 , 238-248, 2015.}
+\textit{INFORMS Journal on Computing} 27:2 , 238-248, 2015.
+
+Iain Dunning, Joey Huchette, and Miles Lubin: 
+JuMP: A Modeling Language for Mathematical Optimization.
+ \textit{SIAM Rev.}, 59(2), 295--320. 2017.
+}
     
 \end{frame}
 
@@ -616,17 +621,17 @@ C2 = [ 16   5   6  19  12 ;
 \vspace{5mm}
 \begin{columns}
 %
-\begin{column}{0.2\textwidth}
+\begin{column}{0.15\textwidth}
 Algorithm: \\
 \vspace{15mm}
-Implementation:\\  
+Routine:\\  
 \vspace{2mm}
 Output: \\
-\vspace{8mm}
+\vspace{6mm}
 Program:
-\vspace{11mm}
+\vspace{33mm}
 \end{column}
-\begin{column}{0.8\textwidth}
+\begin{column}{0.85\textwidth}
          Two phases  \vspace{1mm}\\
          {\footnotesize A. Przybylski, X. Gandibleux, and M. Ehrgott. Two phase algorithms for the bi-objective assignment problem.
          \textit{European Journal of Operational Research}, 185(2):509--533, 2008.\\}
@@ -636,16 +641,25 @@ Program:
 \medskip
 
 $X_E \subseteq \mN^n$, $Y_N \subseteq \Z^2$
-\vspace{5mm}
+\vspace{3mm}
 
 {\footnotesize
 \begin{verbatim}
-using vOptSpecific   
-m = set2LAP( n , C1 , C2 )
-solver = LAP_Przybylski2008( ) 
-z1, z2, S = vSolve( m , solver ) 
+01  using vOptSpecific   
+02  m = set2LAP( n , C1 , C2 )
+03  solver = LAP_Przybylski2008( ) 
+04  z1, z2, S = vSolve( m , solver ) 
 \end{verbatim}
 }          
+or simply (using default options)
+{\footnotesize
+\begin{verbatim}
+01  using vOptSpecific   
+02  m = set2LAP( n , C1 , C2 )
+03  z1, z2, S = vSolve( m ) 
+\end{verbatim}
+}          
+
 \end{column}
 %
 \end{columns}         
@@ -659,7 +673,7 @@ z1, z2, S = vSolve( m , solver )
 \vspace{5mm}
 \begin{columns}
 %
-\begin{column}{0.2\textwidth}
+\begin{column}{0.15\textwidth}
 Algorithm: \\
 \vspace{18mm}
 MILP:\\  
@@ -669,7 +683,7 @@ Output: \\
 Program:
 \vspace{30mm}
 \end{column}
-\begin{column}{0.8\textwidth}
+\begin{column}{0.85\textwidth}
          $\epsilon$-constraint \vspace{1mm}\\
          {\footnotesize Y.V. Haimes, L.S. Lasdon, D.A. Wismer: On a bicriterion formation of the problems of integrated system identification and system optimization. 
          \textit{IEEE Transactions on Systems, Man and Cybernetics}. Volume SMC-1, Issue 3, 296-297, 1971.\\}
@@ -683,15 +697,15 @@ $X_E \subseteq \mN^n$, $Y_N \subseteq \Z^2$
 
 {\footnotesize
 \begin{verbatim}
-using vOptGeneric
-using GLPK ; using GLPKMathProgInterface
-m = vModel( solver = GLPKSolverMIP() )
-@variable( m , x[1:n,1:n]  >= 0, Bin )
-@addobjective( m , Min, sum{ C1[i,j]*x[i,j], i=1:n,j=1:n } )
-@addobjective( m , Min, sum{ C2[i,j]*x[i,j], i=1:n,j=1:n } )
-@constraint( m , cols[i=1:n], sum{x[i,j], j=1:n} == 1 )
-@constraint( m , rows[j=1:n], sum{x[i,j], i=1:n} == 1 )
-@time solve( m , method = :epsilon , step = 0.5 )
+01  using vOptGeneric
+02  using GLPK ; using GLPKMathProgInterface
+03  m = vModel( solver = GLPKSolverMIP() )
+04  @variable( m , x[1:n,1:n] , Bin )
+05  @addobjective( m , Min, sum( C1[i,j]*x[i,j] for i=1:n,j=1:n ) )
+06  @addobjective( m , Min, sum( C2[i,j]*x[i,j] for i=1:n,j=1:n ) )
+07  @constraint( m , cols[i=1:n], sum(x[i,j] for j=1:n) == 1 )
+08  @constraint( m , rows[j=1:n], sum(x[i,j] for i=1:n) == 1 )
+09  @time solve( m , method = :epsilon , step = 0.5 )
 \end{verbatim}
 }
           
@@ -846,20 +860,24 @@ N.A: not available (timeout of 180s)
 %\item 
 %\item 
 
-Homepage of vOptSolver:\\
+Homepage of vOptSolver:\vspace{-1mm} \\
          \url{http://voptsolver.github.io/vOptSolver/}
 %\item 
 
 
-\quad Repository of vOptSolver:\\
+\quad Repository of vOptSolver:\vspace{-1mm}\\
 \quad         \url{http://github.com/vOptSolver}
          
-\quad Repository of vOptSpecific:\\
+\quad Repository of vOptSpecific:\vspace{-1mm}\\
 \quad         \url{http://github.com/vOptSolver/vOptSpecific.jl}
 %\item 
 
-\quad Repository of vOptGeneric:\\
+\quad Repository of vOptGeneric:\vspace{-1mm}\\
 \quad         \url{http://github.com/vOptSolver/vOptGeneric.jl}              
+
+\quad Repository of vOptLib (temporary url):\vspace{-1mm}\\
+\quad         \url{http://gitlab.univ-nantes.fr/vopt1/vOptLib}              
+
 %\vspace{4mm}
 
 
@@ -871,12 +889,17 @@ Homepage of vOptSolver:\\
 
 
 %\item 
-Contact concerning vOptSolver:\\
+Contact concerning vOptSolver:\vspace{-1mm}\\
          \texttt{vopt@univ-nantes.fr}  \\
 %\end{itemize}
-\vspace{4mm}
+\vspace{2mm}
 
-Homepage of the ANR/DFG research project ``vOpt'': \\
+
+Follow vOptSolver on Twitter:\vspace{-1mm}\\
+   \texttt{@vOptSolver}  \\
+\vspace{2mm}
+
+Homepage of the ANR/DFG research project ``vOpt'': \vspace{-1mm}\\
          \url{http://vopt-anr-dfg.univ-nantes.fr}
 
 
