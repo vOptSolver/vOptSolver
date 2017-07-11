@@ -186,7 +186,7 @@ History: MCDMlib (opened in 1998) --- MOCOlib, the MOCO section of the MCDMlib (
 % ================================================================
 \begin{frame}{Context}
 
-\hspace{-3mm}Computing $Y_N$ for Multiobjective linear Optimization Problems (MOP):
+\hspace{-3mm}Computing $Y_N$ for Multiobjective (linear) Optimization Problems (\blue{MOP}):
 
 
 \begin{columns}
@@ -195,14 +195,14 @@ $$
 \begin{array}{rcl}
 \min z(x) & = & {C}x\\
 \hbox{s/t } Tx & \leqq & d\\
-x & \in & 
-\mR^{n_1} \times \mZ^{n_2}
+\blue{x} & \blue{\in} & 
+\blue{\mR^{n_1} \times \mZ^{n_2}}
 \notag
 \end{array}
 \vspace{2mm}
 $$
 \begin{center}
-Multi Objective Mixed-Integer Linear Problem (MOMILP)
+Multi Objective Mixed-Integer Linear Problem (\blue{MOMILP})
 \end{center}
 \end{column}
 \begin{column}{0.33\textwidth}
@@ -210,14 +210,14 @@ $$
 \begin{array}{rcl}
 \min z(x) & = & {C}x\\
 \hbox{s/t } Tx & \leqq & d\\
-x & \in & 
-\mR^{n_1}
+\blue{x} & \blue{\in} & 
+\blue{\mR^{n_1}}
 \notag
 \end{array}
 \vspace{2mm}
 $$
 \begin{center}
-Multi Objective\\ Linear \\Problem (MOLP)
+Multi Objective\\ Linear \\Problem (\blue{MOLP})
 \end{center}
 \end{column}
 \begin{column}{0.33\textwidth}
@@ -225,22 +225,22 @@ $$
 \begin{array}{rcl}
 \min z(x) & = & {C}x\\
 \hbox{s/t } Tx & \leqq & d\\
-x & \in & 
-\mZ^{n_2}
+\blue{x} & \blue{\in} & 
+\blue{\mZ^{n_2}}
 \notag
 \end{array}
 \vspace{2mm}
 $$
 \begin{center}
-Multi Objective\\ Integer \\Problem (MOIP)
+Multi Objective\\ Integer \\Problem (\blue{MOIP})
 \end{center}
 \end{column}
 \end{columns}
 \vspace{2mm}
 
 \begin{center}
-MO(M)ILP + structure\\
-MultiObjective Combinatorial Optimization (MOCO)
+MO(M)ILP \blue{+ structure}\\
+MultiObjective Combinatorial Optimization (\blue{MOCO})
 \end{center}
 \vspace{2mm}
 \noindent 
@@ -708,6 +708,8 @@ $X_E \subseteq \mN^n$, $Y_N \subseteq \Z^2$
 09  @time solve( m , method = :epsilon , step = 0.5 )
 \end{verbatim}
 }
+
+
           
 \end{column}
 %
@@ -716,6 +718,56 @@ $X_E \subseteq \mN^n$, $Y_N \subseteq \Z^2$
        
 \end{frame}
 
+% ================================================================
+\begin{frame}[fragile=singleslide]{Example: 2-LAP and vOptGeneric}
+
+\vspace{5mm}
+\begin{columns}
+%
+\begin{column}{0.15\textwidth}
+Algorithm: \\
+\vspace{18mm}
+MILP:\\  
+\vspace{2mm}
+Output: \\
+\vspace{6mm}
+Program:
+\vspace{30mm}
+\end{column}
+\begin{column}{0.85\textwidth}
+         $\epsilon$-constraint \vspace{1mm}\\
+         {\footnotesize Y.V. Haimes, L.S. Lasdon, D.A. Wismer: On a bicriterion formation of the problems of integrated system identification and system optimization. 
+         \textit{IEEE Transactions on Systems, Man and Cybernetics}. Volume SMC-1, Issue 3, 296-297, 1971.\\}
+\medskip
+
+         GLPK
+\medskip
+
+$X_E \subseteq \mN^n$, $Y_N \subseteq \Z^2$
+\vspace{3mm}
+
+{\footnotesize
+\begin{verbatim}
+01  using vOptGeneric
+02  using GLPK ; using GLPKMathProgInterface
+03  m = vModel( solver = GLPKSolverLP() )
+04  @variable( m , x[1:n,1:n] >= 0 )
+05  @addobjective( m , Min, sum( C1[i,j]*x[i,j] for i=1:n,j=1:n ) )
+06  @addobjective( m , Min, sum( C2[i,j]*x[i,j] for i=1:n,j=1:n ) )
+07  @constraint( m , cols[i=1:n], sum(x[i,j] for j=1:n) == 1 )
+08  @constraint( m , rows[j=1:n], sum(x[i,j] for i=1:n) == 1 )
+09  @time solve( m , method = :epsilon , step = 0.5 )
+\end{verbatim}
+}
+
+
+          
+\end{column}
+%
+\end{columns}         
+
+       
+\end{frame}
 
 % ================================================================
 \begin{frame}{Performances}
@@ -829,7 +881,7 @@ N.A: not available (timeout of 180s)
              \smallskip
     \item integrate all the solving algorithms developed at Nantes by our research group    
              \smallskip
-    \item collaborate with all colleagues who are willing to contribute to the  development of the solver
+    \item \blue{collaborate with all colleagues who are willing to contribute to the  development of the solver}
  \end{itemize}    
 \medskip
 
@@ -837,7 +889,7 @@ N.A: not available (timeout of 180s)
 \begin{itemize}
     \item introduce vOptSolver in OR/MCDM courses and seminars, as support for exercices and research projects
               \smallskip
-    \item integrate feedbacks of users to enhance the use of vOptSolver, release versions incorporating new/improved problems/algorithms    
+    \item \blue{integrate feedbacks of users to enhance the use of vOptSolver, release versions incorporating new/improved problems/algorithms}    
                   \smallskip
     \item consider to integrate approximation algorithms, such as multiobjective (meta)heuristics
  \end{itemize}  
@@ -855,13 +907,13 @@ N.A: not available (timeout of 180s)
 
 %\end{center}
 
-{
+\small{
 %\begin{itemize}
 %\item 
 %\item 
 
 Homepage of vOptSolver:\vspace{-1mm} \\
-         \url{http://voptsolver.github.io/vOptSolver/}
+         \blue{\url{http://voptsolver.github.io/vOptSolver/}}
 %\item 
 
 
@@ -878,7 +930,7 @@ Homepage of vOptSolver:\vspace{-1mm} \\
 \quad Repository of vOptLib (temporary url):\vspace{-1mm}\\
 \quad         \url{http://gitlab.univ-nantes.fr/vopt1/vOptLib}              
 
-%\vspace{4mm}
+\vspace{2mm}
 
 
 %\item Homepage of Julia language:\\
@@ -890,7 +942,7 @@ Homepage of vOptSolver:\vspace{-1mm} \\
 
 %\item 
 Contact concerning vOptSolver:\vspace{-1mm}\\
-         \texttt{vopt@univ-nantes.fr}  \\
+         \blue{\texttt{vopt@univ-nantes.fr}}  \\
 %\end{itemize}
 \vspace{2mm}
 
