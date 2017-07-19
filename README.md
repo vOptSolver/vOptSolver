@@ -115,7 +115,7 @@ Examples of problems ready to be performed are provided in repositories of vOptS
 
 ## Documentation
 - Tutorial (in waiting a real manual) for new users
-- presentation given in conferences
+- Presentations given in conferences
 
 
 ## References
