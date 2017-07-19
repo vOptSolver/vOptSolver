@@ -30,7 +30,7 @@ Prof. Dr. Xavier Gandibleux, University of Nantes - France [(contact)](http://ww
 ### How To Cite
 Xavier Gandibleux, Gauthier Soleilhac, Anthony Przybylski, Flavien Lucas, Stefan Ruzika, Pascal Halffmann. vOptSolver,   a   "get   and   run"   solver   of multiobjective  linear  optimization  problems  built  on Julia and JuMP. MCDM2017: 24th International Conference on Multiple Criteria Decision Making. July 10-14, 2017. Ottawa (Canada).
 
-X. Gandibleux, G. Soleilhac, A. Przybylski, S. Ruzika. 
+Xavier Gandibleux, Gauthier Soleilhac, Anthony Przybylski, Stefan Ruzika. 
 vOptSolver: an open source software environment for multiobjective mathematical optimization.
 *IFORS2017: 21st Conference of the International Federation of Operational Research Societies*. 
 July 17-21, 2017 Quebec City, Canada.
