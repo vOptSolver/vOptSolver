@@ -1,4 +1,6 @@
 # Example on how to plot Y_N for a bi-objective discrete optimization case
+# July 2017
+
 using PyPlot
 
 title(L"$Y_N$")
