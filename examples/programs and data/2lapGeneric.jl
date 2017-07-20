@@ -20,7 +20,6 @@ m = vModel( solver = GLPKSolverMIP() )
 @addobjective( m , Min, sum( C2[i,j]*x[i,j] for i=1:n,j=1:n ) )
 @constraint( m , cols[i=1:n], sum(x[i,j] for j=1:n) == 1 )
 @constraint( m , rows[j=1:n], sum(x[i,j] for i=1:n) == 1 )
-
 @time solve( m , method = :epsilon , step = 0.5 )
 
 print_X_E(m)
