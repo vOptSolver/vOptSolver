@@ -110,12 +110,10 @@ Refer to the instructions provided for
 - [vOptGeneric](https://github.com/vOptSolver/vOptGeneric.jl)
 
 
-## Examples
-Examples of problems ready to be performed are provided in repositories of vOptSpecific and vOptGeneric respectively.
-
 ## Documentation
-- Tutorial (in waiting a user manual) for new users
-- Presentations given in conferences
+- Tutorial (in waiting a user manual) for new users (folder docs)
+- Examples of problems ready to be performed (folder examples)
+- Presentations given in conferences (folder talks)
 
 
 ## References
