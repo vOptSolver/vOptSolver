@@ -1,15 +1,15 @@
-# Example of vOptGeneric, for the 2LAP
+# Example of vOptGeneric, for a 2IP (here a 2LAP)
 # July 2017
 
 n  =  3
 
-C1 = [  3    9   7     ;
-       16   10   6     ;
-        2    7  11        ]
+C1 = [  3    9   7   ;
+       16   10   6   ;
+        2    7  11     ]
 
-C2 = [ 16   15   6     ;
-        5    7  13     ;
-        1    2  13        ]
+C2 = [ 16   15   6   ;
+        5    7  13   ;
+        1    2  13     ]
        
 using vOptGeneric
 using GLPK ; using GLPKMathProgInterface
