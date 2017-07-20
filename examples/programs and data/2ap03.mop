@@ -1,0 +1,69 @@
+NAME   vOptModel
+OBJSENSE
+ MIN
+ROWS
+ N  OBJ1
+ N  OBJ2
+ E  CON1
+ E  CON2
+ E  CON3
+ E  CON4
+ E  CON5
+ E  CON6
+COLUMNS
+    MARKER    'MARKER'                 'INTORG'
+    x_1_1  CON1  1
+    x_1_1  CON4  1
+    x_1_1  OBJ1  3
+    x_1_1  OBJ2  16
+    x_1_2  CON1  1
+    x_1_2  CON5  1
+    x_1_2  OBJ1  9
+    x_1_2  OBJ2  15
+    x_1_3  CON1  1
+    x_1_3  CON6  1
+    x_1_3  OBJ1  7
+    x_1_3  OBJ2  6
+    x_2_1  CON2  1
+    x_2_1  CON4  1
+    x_2_1  OBJ1  16
+    x_2_1  OBJ2  5
+    x_2_2  CON2  1
+    x_2_2  CON5  1
+    x_2_2  OBJ1  10
+    x_2_2  OBJ2  7
+    x_2_3  CON2  1
+    x_2_3  CON6  1
+    x_2_3  OBJ1  6
+    x_2_3  OBJ2  13
+    x_3_1  CON3  1
+    x_3_1  CON4  1
+    x_3_1  OBJ1  2
+    x_3_1  OBJ2  1
+    x_3_2  CON3  1
+    x_3_2  CON5  1
+    x_3_2  OBJ1  7
+    x_3_2  OBJ2  2
+    x_3_3  CON3  1
+    x_3_3  CON6  1
+    x_3_3  OBJ1  11
+    x_3_3  OBJ2  13
+    MARKER    'MARKER'                 'INTEND'
+RHS
+    RHS    CON1    1
+    RHS    CON2    1
+    RHS    CON3    1
+    RHS    CON4    1
+    RHS    CON5    1
+    RHS    CON6    1
+BOUNDS
+  UP BOUND x_1_1 1
+  UP BOUND x_1_2 1
+  UP BOUND x_1_3 1
+  UP BOUND x_2_1 1
+  UP BOUND x_2_2 1
+  UP BOUND x_2_3 1
+  UP BOUND x_3_1 1
+  UP BOUND x_3_2 1
+  UP BOUND x_3_3 1
+ENDATA
