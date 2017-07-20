@@ -1,12 +1,15 @@
+# Example of vOptGeneric, for the 2LAP
+# July 2017
+
 n  =  3
 
-C1 = [  3   9   7       ;
+C1 = [  3    9   7     ;
        16   10   6     ;
-        2   7  11        ]
+        2    7  11        ]
 
 C2 = [ 16   15   6     ;
-       5   7  13     ;
-        1   2  13          ]
+        5    7  13     ;
+        1    2  13        ]
        
 using vOptGeneric
 using GLPK ; using GLPKMathProgInterface
@@ -22,4 +25,3 @@ m = vModel( solver = GLPKSolverMIP() )
 
 print_X_E(m)
 getY_N(m)
-
