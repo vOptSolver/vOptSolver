@@ -111,9 +111,9 @@ Refer to the instructions provided for
 
 
 ## Documentation
-- Tutorial (in waiting a user manual) for new users (folder docs)
+- Tutorial (in waiting a user manual) for new users [(folder docs)](./docs/)
 - Examples of problems ready to be performed [(folder examples)](./examples/)
-- Presentations given in conferences (folder talks)
+- Presentations given in conferences [(folder talks)](./talks)
 
 
 ## References
