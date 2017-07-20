@@ -12,7 +12,5 @@ C2 = [ 16   15   6   ;
         1    2  13     ]
 
 using vOptSpecific   
-       
 m = set2LAP( n , C1 , C2 )
-
 z1, z2, S = vSolve( m ) 
