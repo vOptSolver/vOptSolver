@@ -111,9 +111,9 @@ Refer to the instructions provided for
 
 
 ## Documentation
-- Tutorial (in waiting a user manual) for new users [(folder docs)](https://voptsolver.github.io/vOptSolver/docs/)
-- Examples of problems ready to be performed [(folder examples)](https://voptsolver.github.io/vOptSolver/examples/)
-- Presentations given in conferences [(folder talks)](https://voptsolver.github.io/vOptSolver/examples/talks/)
+- Tutorial (in waiting a user manual) for new users [(folder docs)](https://github.com/vOptSolver/vOptSolver/tree/master/docs)
+- Examples of problems ready to be performed [(folder examples)](https://github.com/vOptSolver/vOptSolver/tree/master/examples)
+- Presentations given in conferences [(folder talks)](https://github.com/vOptSolver/vOptSolver/tree/master/talks)
 
 
 ## References
