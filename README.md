@@ -112,7 +112,7 @@ Refer to the instructions provided for
 
 ## Documentation
 - Tutorial (in waiting a user manual) for new users (folder docs)
-- Examples of problems ready to be performed (folder examples)
+- Examples of problems ready to be performed [(folder examples)](./examples/)
 - Presentations given in conferences (folder talks)
 
 
