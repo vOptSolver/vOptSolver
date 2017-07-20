@@ -5,8 +5,7 @@
 using vOptGeneric
 using GLPK ; using GLPKMathProgInterface
 
-m = parseMOP( "2ap03.mop" , solver=GLPKSolverMIP() )
-
+m = parseMOP( "2ap03.mop" , solver=GLPKSolverMIP() ) # comment: set up the path to the file if required 
 @time solve( m , method = :epsilon , step = 0.5 )
 
 print_X_E(m)
