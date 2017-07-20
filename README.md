@@ -11,7 +11,6 @@ This repository (1) gives a description of the solver and (2) hosts documents co
 - [Overview](./README.md#overview)
 - [Features](./README.md#features)
 - [Instructions](./README.md#instructions)
-- [Examples](./README.md#examples)
 - [Documentation](./README.md#documentation)
 - [References](./README.md#references)
 
@@ -20,6 +19,7 @@ This repository (1) gives a description of the solver and (2) hosts documents co
     03-Jun-2017: The next release (v0.2) is scheduled for June 2017
     17-Jun-2017: Moved from GitLab to GitHub
     26-Jun-2017: Source code of vOptGeneric and vOptSpecific are online
+    20-Jul-2017: Examples are available (folder examples)
 
 ### Feedback
 All bugs, feature requests, pull requests, feedback, etc., are welcome. 
