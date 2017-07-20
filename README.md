@@ -111,9 +111,9 @@ Refer to the instructions provided for
 
 
 ## Documentation
-- Tutorial (in waiting a user manual) for new users [(folder docs)](./docs/)
-- Examples of problems ready to be performed [(folder examples)](./examples/)
-- Presentations given in conferences [(folder talks)](./talks)
+- Tutorial (in waiting a user manual) for new users [(folder docs)](https://voptsolver.github.io/vOptSolver/docs/)
+- Examples of problems ready to be performed [(folder examples)](https://voptsolver.github.io/vOptSolver/examples/)
+- Presentations given in conferences [(folder talks)](https://voptsolver.github.io/vOptSolver/examples/talks/)
 
 
 ## References
