@@ -625,6 +625,131 @@ julia> getY_N(m)
 %
 % ==========================================================================================
 %
+\section{Examples with a bi-objective one machine scheduling problem}
+
+\vspace{5mm} \noindent {\large  \textbf{The specific bi-objective one machine scheduling problem (2OSP) considered is}} \vspace{5mm} 
+
+
+$$1\mid . \mid (\Sigma C_i,T_{max})$$
+
+
+
+\vspace{15mm} \noindent {\large  \textbf{A numerical instance of this 2OSP}} \vspace{5mm} 
+
+\begin{table}[htp]
+\begin{center}
+\begin{tabular}{|c||c|c|c|c|}
+\hline
+$i$ & 1 & 2 & 3 & 4 \\
+\hline
+$p_i$  &  2 & 4 & 3  & 1 \\
+\hline
+$d_i$  &  1 & 2 & 4 & 6 \\
+\hline
+$r_i$     & \multicolumn{4}{c|}{not required}\\
+\hline
+$w_i$    & \multicolumn{4}{c|}{not required}\\
+\hline
+\end{tabular}
+\end{center}
+\label{default}
+\end{table}%
+
+
+\break
+
+%
+% ==========================================================================================
+%
+\subsection{vOptSpecific and 2OSP:\\ data are explicitely provided}
+
+\vspace{5mm} \noindent {\large  \textbf{The program}} \vspace{2mm} \hrule
+
+{%\small
+\begin{lstlisting}
+n = 4
+p = [  2 , 4 , 3 , 1 ]
+d = [  1 , 2 , 4 , 6 ]
+
+using vOptSpecific
+
+id = set2OSP( n , p , d )
+z1, z2 , S = vSolve( id )
+\end{lstlisting}
+}
+\vspace{5mm} \noindent {\large  \textbf{The result}} \vspace{2mm} \hrule
+
+\begin{verbatim}
+julia> z1
+3-element Array{Int64,1}:
+ 20
+ 21
+ 27
+
+julia> z2
+3-element Array{Int64,1}:
+ 8
+ 6
+ 5
+
+julia> S
+3-element Array{Array{Int64,1},1}:
+ [4, 1, 3, 2]
+ [4, 1, 2, 3]
+ [1, 2, 3, 4]
+\end{verbatim}
+
+\break
+
+%
+% ==========================================================================================
+%
+\subsection{vOptSpecific and 2OSP:\\ all data and the solver are explicitely provided}
+
+\vspace{5mm} \noindent {\large  \textbf{The program}} \vspace{2mm} \hrule
+
+{%\small
+\begin{lstlisting}
+n = 4
+p = [  2 , 4 , 3 , 1 ]
+d = [  1 , 2 , 4 , 6 ]
+r = [  0 , 0 , 0 , 0 ]
+w = [  1 , 1 , 1 , 1 ]
+
+using vOptSpecific
+
+id = set2OSP( n , p , d , r , w )
+solver = OSP_VanWassenhove1980( )
+z1, z2 , S = vSolve( id , solver )
+\end{lstlisting}
+}
+\vspace{5mm} \noindent {\large  \textbf{The result}} \vspace{2mm} \hrule
+
+\begin{verbatim}
+julia> z1
+3-element Array{Int64,1}:
+ 20
+ 21
+ 27
+
+julia> z2
+3-element Array{Int64,1}:
+ 8
+ 6
+ 5
+
+julia> S
+3-element Array{Array{Int64,1},1}:
+ [4, 1, 3, 2]
+ [4, 1, 2, 3]
+ [1, 2, 3, 4]
+\end{verbatim}
+
+\break
+
+%
+% ==========================================================================================
+%
 \section{vOptTools}
 
 \subsection{Script for plotting $Y_N$}
