@@ -1,3 +1,6 @@
+# Example of vOptSpecific, for the 2OSP
+# July 2017
+
 n = 4
 p = [  2 , 4 , 3 , 1 ]
 d = [  1 , 2 , 4 , 6 ]
