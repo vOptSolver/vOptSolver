@@ -14,14 +14,12 @@ This repository (1) gives a description of the solver and (2) hosts documents co
 - [Documentation](./README.md#documentation)
 - [References](./README.md#references)
 
-
 ### News
     20-Jul-2017: Examples presented in conferences (MCDM'2017; IFORS'2017) are online (folder examples)
     26-Jun-2017: Source codes of vOptGeneric and vOptSpecific for v0.2 are online
     17-Jun-2017: Moved from GitLab to GitHub
     03-Jun-2017: The next release (v0.2) is scheduled for June 2017
     
-
 ### Feedback
 All bugs, feature requests, pull requests, feedback, etc., are welcome. 
 
@@ -30,7 +28,6 @@ Prof. Dr. Xavier Gandibleux, University of Nantes - France [(contact)](http://ww
 
 ### Developers
 Current contributors: Xavier Gandibleux, Gauthier Soleilhac, Anthony Przybylski.
-
 Past contributors: Flavien Lucas, Pauline Chatelier.
 
 ### How To Contribute
