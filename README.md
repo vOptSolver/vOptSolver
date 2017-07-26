@@ -27,6 +27,12 @@ All bugs, feature requests, pull requests, feedback, etc., are welcome.
 ### Coordinator
 Prof. Dr. Xavier Gandibleux, University of Nantes - France [(contact)](http://www.univ-nantes.fr/gandibleux-x)
 
+### How To Contribute
+1- in sending your examples (code JuMP + data) solved with vOptGeneric
+2- in plugging your own algorithms into vOptSpecific or into vOptGeneric
+3- in developing vOptSpecific for windows
+4- in developing new primitives for vOptTools
+
 ### How To Cite
 Xavier Gandibleux, Gauthier Soleilhac, Anthony Przybylski, Flavien Lucas, Stefan Ruzika, Pascal Halffmann. vOptSolver,   a   "get   and   run"   solver   of multiobjective  linear  optimization  problems  built  on Julia and JuMP. *MCDM2017: 24th International Conference on Multiple Criteria Decision Making*. July 10-14, 2017. Ottawa (Canada).
 
