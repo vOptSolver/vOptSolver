@@ -55,6 +55,9 @@ vOptSolver: an open source software environment for multiobjective mathematical 
 *IFORS2017: 21st Conference of the International Federation of Operational Research Societies*. 
 July 17-21, 2017. Quebec City (Canada).
 
+### Cooperation
+The development of vOptSolver started in the ANR/DFG-14-CE35-0034-01 research project vOpt [(link)](https://vopt-ANR-DFG.univ-nantes.fr/) involving Université de Nantes (France) and University of Koblenz-Landau/University of Kaiserslautern (Germany).
+
 ## Overview
 
 ### Aims
