@@ -128,7 +128,9 @@ The solving algorithms included compute an exact complete set of non-dominated p
 
 ### Information
 - Julia is available on macOS, linux, windows for a local use or online on [JuliaBox](https://juliabox.com/) for a distant use
-- vOptSolver is free, open source under MIT licence. vOptGeneric and vOptSpecific have been tested with Julia 0.6 on macOS 10.12.6 and linux-Ubuntu 14.04 LTS. vOptGeneric has been tested with windows 10 64 bits.
+- vOptSolver (composed of vOptGeneric, vOptSpecific, and vOptTools) is free, open source under MIT licence. 
+- vOptSolver has been tested with Julia 0.6 on macOS 10.12.6 and linux-Ubuntu 14.04 LTS. 
+- vOptGeneric has been tested with Julia 0.6 on windows 10 64 bits.
 
 ### Installation and usage Instructions
 Refer to the instructions provided for
