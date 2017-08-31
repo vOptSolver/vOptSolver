@@ -106,8 +106,8 @@ Except for Lexico which computes the lexicographic optimal solutions, the solvin
     - Jorge2010: 2UKP2010 (re-implemented in 2017 in Julia)
     - Delmee2017: 2UMFLP2016 (C++)
     - [Gandibleux2012: 2UDFLP2012 (C++); ; Gandibleux2006: PATHS (C)]
-- vOptTools: collection of tools for MOCO/MOIP, 
-    - Dumez2017: handling non-dominated points/2ILP (Julia)
+- vOptTools: collection of primitives for multiobjective linear optimization problems, 
+    - Dumez2017: algorithm for maintaining non-dominated points/2ILP (Julia)
 
 ### Inputs
 - Non-structured problems: 
