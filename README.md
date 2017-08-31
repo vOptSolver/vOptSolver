@@ -93,7 +93,7 @@ The development of vOptSolver started in the ANR/DFG-14-CE35-0034-01 research pr
     -  [MKP, UDFLP, SSCFLP, CFLP, PATHS]
 
 ### Algorithms
-The solving algorithms included compute an exact complete set of non-dominated points
+Except for Lexico which computes the lexicographic optimal solutions, the solving algorithms included compute an exact complete set of non-dominated points.
 - vOptGeneric: generic algorithms for structured or non-structured discrete problems,
     - Lexico: lexicographic optimal solutions / pILP (Julia+JuMP) 
     - Haimes1971: epsilon-constraint method / 2ILP (Julia+JuMP)
@@ -106,8 +106,8 @@ The solving algorithms included compute an exact complete set of non-dominated p
     - Jorge2010: 2UKP2010 (re-implemented in 2017 in Julia)
     - Delmee2017: 2UMFLP2016 (C++)
     - [Gandibleux2012: 2UDFLP2012 (C++); ; Gandibleux2006: PATHS (C)]
-- Algorithms and datastructures for handling non-dominated points: 
-    - Dumez2017: AVL2017/2ILP (Julia)
+- vOptTools: collection of tools for MOCO/MOIP, 
+    - Dumez2017: handling non-dominated points/2ILP (Julia)
 
 ### Inputs
 - Non-structured problems: 
