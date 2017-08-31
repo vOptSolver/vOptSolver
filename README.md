@@ -1,7 +1,7 @@
 # Solver of multiobjective linear optimization problems
 
 **vOptSolver** is a solver of multiobjective linear optimization problems (MOCO, MOIP, MOMIP, MOLP). It is currently supported by the ANR/DFG-14-CE35-0034-01 research project [(link)](https://vopt-ANR-DFG.univ-nantes.fr/). 
-The version 0.2 integrates exact algorithms for computing a complete set of non-dominated points for structured and non-structured optimization problems with two [and three] objectives ([ ] = forthcoming).
+The version 0.1.0 integrates exact algorithms for computing a complete set of non-dominated points for structured and non-structured optimization problems with two [and three] objectives ([ ] = forthcoming).
 
 This repository (1) gives a description of the solver and (2) hosts documents covering all parts of the solver.
 
@@ -16,9 +16,9 @@ This repository (1) gives a description of the solver and (2) hosts documents co
 
 ### News
     20-Jul-2017: Examples presented in conferences (MCDM'2017; IFORS'2017) are online (folder examples)
-    26-Jun-2017: Source codes of vOptGeneric and vOptSpecific for v0.2 are online
+    26-Jun-2017: Source codes of vOptGeneric and vOptSpecific for v0.0.2 are online
     17-Jun-2017: Moved from GitLab to GitHub
-    03-Jun-2017: The next release (v0.2) is scheduled for June 2017
+    03-Jun-2017: The next release (v0.0.2) is scheduled for June 2017
     
 ### Feedback
 All bugs, feature requests, pull requests, feedback, etc., are welcome. 
@@ -42,7 +42,7 @@ Past contributors: Pauline Chatelier, Flavien Lucas.
 In brief, every contributions aiming to share our efforts, our algorithms, our productions around this open source software are welcome.
 
 ### License
-vOptSolver is distributed under the (GPL) License. 
+vOptSolver is distributed under the MIT License. 
 
 ### How To Cite
 Xavier Gandibleux, Gauthier Soleilhac, Anthony Przybylski, Flavien Lucas, Stefan Ruzika, Pascal Halffmann. vOptSolver,   a   "get   and   run"   solver   of multiobjective  linear  optimization  problems  built  on Julia and JuMP. *MCDM2017: 24th International Conference on Multiple Criteria Decision Making*. July 10-14, 2017. Ottawa (Canada).
@@ -75,7 +75,7 @@ The development of vOptSolver started in the ANR/DFG-14-CE35-0034-01 research pr
 ### Background
 - Julia programming language [(link)](http://julialang.org/)
 - JuMP algebraic language [(link)](https://jump.readthedocs.io/en/latest/)
-- Usual free (GLPK) and commercial (CPLEX, GUROBI) MILP solvers
+- Usual free (GLPK, Clp/Cbc) and commercial (CPLEX, GUROBI) MILP solvers
 
 ## Features
 
@@ -122,7 +122,7 @@ The solving algorithms included compute an exact complete set of non-dominated p
 
 ### Information
 - Julia is available on macOS, linux, windows for a local use or online on [JuliaBox](https://juliabox.com/) for a distant use
-- vOptSolver is free, open source under [GPL] licence, tested with Julia 0.6 on macOS and linux-Ubuntu
+- vOptSolver is free, open source under MIT licence. vOptGeneric and vOptSpecific have been tested with Julia 0.6 on macOS 10.12.6 and linux-Ubuntu 14.04 LTS. vOptGeneric has been tested with windows 10 64 bits.
 
 ### Installation and usage Instructions
 Refer to the instructions provided for
@@ -207,6 +207,7 @@ Terms and acronyms used
 - API: stands for Application Programming Interface
 - GPL: stands for GNU General Public License
 - GLPK: stands for GNU Linear Programming Kit, an open source solver
+- Clp/Cbc : an open source solver (for LP and MILP respectively) from the COIN-OR project
 - CPLEX: a commercial solver
 - GUROBI: a commercial solver
 - MOP: MultiObjective extension of MPS format
