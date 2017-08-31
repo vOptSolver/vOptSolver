@@ -15,6 +15,7 @@ This repository (1) gives a description of the solver and (2) hosts documents co
 - [References](./README.md#references)
 
 ### News
+    01-Sep-2017: Source codes of vOptGeneric and vOptSpecific for v0.1.0 are available as Julia packages
     20-Jul-2017: Examples presented in conferences (MCDM'2017; IFORS'2017) are online (folder examples)
     26-Jun-2017: Source codes of vOptGeneric and vOptSpecific for v0.0.2 are online
     17-Jun-2017: Moved from GitLab to GitHub
@@ -87,21 +88,26 @@ The development of vOptSolver started in the ANR/DFG-14-CE35-0034-01 research pr
 - vOptSpecific: Multiobjective structured problems / Application Programming Interface (API),
     -  LAP: Linear Assignment Problem 
     -  OSP: One machine Scheduling Problem
-    -  [UKP, MKP, UDFLP, SSCFLP, UMFLP, CFLP, PATHS]
+    -  UKP: binary Unidimensional knapsack problem 
+    -  UMFLP: Uncapacitated Facility Location Problem with Mixed variables 
+    -  [MKP, UDFLP, SSCFLP, CFLP, PATHS]
 
 ### Algorithms
 The solving algorithms included compute an exact complete set of non-dominated points
 - vOptGeneric: generic algorithms for structured or non-structured discrete problems,
+    - Lexico: lexicographic optimal solutions / pILP (Julia+JuMP) 
     - Haimes1971: epsilon-constraint method / 2ILP (Julia+JuMP)
-    - [Aneja1979: Aneja & Nair method / 2ILP]
-    - [Chalmet1986: Chalmet et al. method / 2ILP]
+    - Aneja1979: Aneja & Nair method (also named the dichotomic method)/ 2ILP (Julia+JuMP)
+    - Chalmet1986: Chalmet et al. method / 2ILP (Julia+JuMP)
     - [Vincent2013: branch-and-bound / 2MILP]
 - vOptSpecific: specific algorithms for structured (MOCO/MOMILP) problem,
     - Przybylski2008: 2LAP2008 (C)
-    - Wassenhove1980: 2OSP1980 (Julia)
-    - [Jorge2010: 2UKP2010 (C++); Gandibleux2012: 2UDFLP2012 (C++); Delmee2017: 2UMFLP2016 (C++); Gandibleux2006: PATHS (C)]
+    - Wassenhove1980: 2OSP1980 (implemented in 2017 in Julia)
+    - Jorge2010: 2UKP2010 (re-implemented in 2017 in Julia)
+    - Delmee2017: 2UMFLP2016 (C++)
+    - [Gandibleux2012: 2UDFLP2012 (C++); ; Gandibleux2006: PATHS (C)]
 - Algorithms and datastructures for handling non-dominated points: 
-    - [AVL2016/2ILP (Julia)]
+    - Dumez2017: AVL2017/2ILP (Julia)
 
 ### Inputs
 - Non-structured problems: 
@@ -174,9 +180,12 @@ Refer to the instructions provided for
     *Caractérisation des solutions efficaces et algorithmes d'énumération exacts pour l'optimisation multiobjectif en variables mixtes binaires.* 
     PhD Thesis (in French), Université de Nantes - France, 2013.
 
--   [Delmee2017] Q. Delmée, X. Gandibleux and A. Przybylski: 
+-   [Delmee2017] Q. Delmée, X. Gandibleux, A. Przybylski: 
     Résolution exacte du problème de localisation de services bi-objectif sans contrainte de capacité en variables mixtes.
     *ROADEF2017 (18ème édition du congrès annuel de la Société Française de Recherche Opérationnelle et d'Aide à la Décision).* 22-24 février 2017, Metz, France.
+    
+-   [Dumez2017] D. Dumez, X. Gandibleux, I. Rusu. Datastructures for Filtering and Storing Non-Dominated Points.
+    *MOPGP'2017: 12th International Conference on Multiple Objective Programming and Goal Programming.* 30-31 October 2017, Metz, France.
 
 
 
