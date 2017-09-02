@@ -89,7 +89,7 @@ The development of vOptSolver started in the ANR/DFG-14-CE35-0034-01 research pr
     -  LAP: Linear Assignment Problem 
     -  OSP: One machine Scheduling Problem
     -  UKP: binary Unidimensional knapsack problem 
-    -  UMFLP: Uncapacitated Facility Location Problem with Mixed variables 
+    -  UMFLP: Uncapacitated Mixed variables Facility Location Problem 
     -  [MKP, UDFLP, SSCFLP, CFLP, PATHS]
 
 ### Algorithms
@@ -209,7 +209,7 @@ Terms and acronyms used
 - UFLP: Uncapacitated Facility Location Problem
 - UDFLP: Discrete Uncapacitated  Facility Location Problem
 - SSCFLP: Single Source Capacitated Facility Location Problem
-- UMFLP:  Mixed variables Uncapacitated Facility Location Problem
+- UMFLP: Uncapacitated Mixed variables Facility Location Problem
 - CFLP: Capacitated Facility Location Problem
 - PATHS: shortest paths problem
 - Julia: name of the programming language
