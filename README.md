@@ -80,7 +80,7 @@ The development of vOptSolver started in the ANR/DFG-14-CE35-0034-01 research pr
 
 ## Features
 
-### Problems / Definition
+### Problems managed
 - vOptGeneric: Multiobjective non-structured problems / algebraic language (JuMP),
     -  LP: Linear Program
     -  MILP: Mixed Integer Linear Program
@@ -92,7 +92,7 @@ The development of vOptSolver started in the ANR/DFG-14-CE35-0034-01 research pr
     -  UMFLP: Uncapacitated Mixed variables Facility Location Problem 
     -  [MKP, UDFLP, SSCFLP, CFLP, PATHS]
 
-### Algorithms
+### Algorithms integrated
 Except for Lexico which computes the lexicographic optimal solutions, the solving algorithms included compute an exact complete set of non-dominated points.
 - vOptGeneric: generic algorithms for structured or non-structured discrete problems,
     - Lexico: lexicographic optimal solutions / pILP (Julia+JuMP) 
