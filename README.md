@@ -28,8 +28,8 @@ All bugs, feature requests, pull requests, feedback, etc., are welcome.
 Prof. Dr. Xavier Gandibleux, University of Nantes - France [(contact)](http://www.univ-nantes.fr/gandibleux-x)
 
 ### Developers
-Current contributors: Xavier Gandibleux, Anthony Przybylski, Gauthier Soleilhac.
-Past contributors: Pauline Chatelier, Flavien Lucas.
+Current contributors: Xavier Gandibleux, Anthony Przybylski, Gauthier Soleilhac, Quentin Delmée.
+Past contributors: Pauline Chatelier, Flavien Lucas, Dorian Dumez.
 
 ### How To Contribute
 1. in adding your examples (code JuMP + data) solved with vOptGeneric to the collection;
