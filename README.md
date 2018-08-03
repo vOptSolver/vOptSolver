@@ -1,7 +1,7 @@
 # Solver of multiobjective linear optimization problems
 
 **vOptSolver** is an ecosystem for modeling and solving multiobjective linear optimization problems (MOCO, MOIP, MOMIP, MOLP). It is currently supported by the ANR/DFG-14-CE35-0034-01 research project [(link)](https://vopt-ANR-DFG.univ-nantes.fr/). 
-It integrates several exact algorithms for computing a complete set of non-dominated points for structured and non-structured optimization problems with at least two objectives ([ ] = forthcoming).
+It integrates several exact algorithms for computing a complete set of non-dominated points for structured and non-structured optimization problems with at least two objectives.
 
 This repository (1) gives a description of the solver and (2) hosts documents covering all parts of the solver.
 
@@ -92,7 +92,7 @@ The development of vOptSolver started in the ANR/DFG-14-CE35-0034-01 research pr
     -  OSP: One machine Scheduling Problem
     -  UKP: binary Unidimensional knapsack problem 
     -  UMFLP: Uncapacitated Mixed variables Facility Location Problem 
-    -  [MKP, UDFLP, SSCFLP, CFLP, PATHS]
+    -  Forthcoming: [MKP, UDFLP, SSCFLP, CFLP, PATHS]
 
 ### Algorithms integrated
 Except for Lexico which computes the lexicographic optimal solutions, the solving algorithms included compute an exact complete set of non-dominated points.
@@ -101,13 +101,13 @@ Except for Lexico which computes the lexicographic optimal solutions, the solvin
     - Haimes1971: epsilon-constraint method / 2ILP (Julia+JuMP)
     - Aneja1979: Aneja & Nair method (also named the dichotomic method)/ 2ILP (Julia+JuMP)
     - Chalmet1986: Chalmet et al. method / 2ILP (Julia+JuMP)
-    - [Vincent2013: branch-and-bound / 2MILP]
+    - Forthcoming:[Vincent2013: branch-and-bound / 2MILP]
 - vOptSpecific: specific algorithms for structured (MOCO/MOMILP) problem,
     - Przybylski2008: 2LAP2008 (C)
     - Wassenhove1980: 2OSP1980 (implemented in 2017 in Julia)
     - Jorge2010: 2UKP2010 (re-implemented in 2017 in Julia)
     - Delmee2017: 2UMFLP2016 (C++)
-    - [Gandibleux2012: 2UDFLP2012 (C++); ; Gandibleux2006: PATHS (C)]
+    - Forthcoming:[Gandibleux2012: 2UDFLP2012 (C++); ; Gandibleux2006: PATHS (C)]
 - vOptTools: collection of primitives for multiobjective linear optimization problems, 
     - Dumez2017: algorithm for maintaining non-dominated points/2ILP (Julia)
 
