@@ -77,7 +77,7 @@ The development of vOptSolver started in the ANR/DFG-14-CE35-0034-01 research pr
 
 ### Background
 - Julia programming language [(link)](http://julialang.org/)
-- JuMP algebraic language [(link)](https://jump.readthedocs.io/en/latest/)
+- JuMP algebraic language [(link)](http://www.juliaopt.org/JuMP.jl/0.18/)
 - Usual free (GLPK, Clp/Cbc) and commercial (CPLEX, GUROBI) MILP solvers
 
 ## Features
