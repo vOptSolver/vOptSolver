@@ -15,7 +15,7 @@ This repository (1) gives a description of the solver and (2) hosts documents co
 - [References](./README.md#references)
 
 ### News
-    01-Jul-2018: Preparing the switch to Julia 0.7 and the new version of JuMP 
+    01-Jul-2018: Preparing the switch to Julia 0.7 and to the new version of JuMP 
     01-Sep-2017: Algorithms added to vOptGeneric and vOptSpecific, documentation and examples are coming.
     20-Jul-2017: Examples presented in conferences (MCDM'2017; IFORS'2017) are online (folder examples)
     26-Jun-2017: Source codes of vOptGeneric and vOptSpecific for v0.0.2 are online
