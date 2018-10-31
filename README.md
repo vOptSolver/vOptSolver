@@ -15,6 +15,7 @@ This repository (1) gives a description of the solver and (2) hosts documents co
 - [References](./README.md#references)
 
 ### News
+    31-Oct-2018: vOptSpecific and vOptGeneric are compliant with Julia v1.x 
     01-Jul-2018: Preparing the switch to Julia 0.7 and to the new version of JuMP 
     01-Sep-2017: Algorithms added to vOptGeneric and vOptSpecific, documentation and examples are coming.
     20-Jul-2017: Examples presented in conferences (MCDM'2017; IFORS'2017) are online (folder examples)
@@ -37,10 +38,9 @@ By chronological order:
 1. in adding your examples (code JuMP + data) solved with vOptGeneric to the collection;
 2. in plugging your own C/C++/Julia algorithms into vOptSpecific or vOptGeneric;
 3. in adapting vOptSpecific for windows;
-4. in developing new primitives for vOptTools;
-5. in sending us your suggestions to improve/extend vOptSolver;
-6. in telling us when you have completed a work (exercices for students; research; paper; etc.) using vOptSolver;
-7. in joining the adventure with us as maintainer of the solver, repositories, documents, etc.
+4. in sending us your suggestions to improve/extend vOptSolver;
+5. in telling us when you have completed a work (exercices for students; research; paper; etc.) using vOptSolver;
+6. in joining the adventure with us as maintainer of the solver, repositories, documents, etc.
 
 In brief, every contributions aiming to share our efforts, our algorithms, our productions around this open source software are welcome.
 
@@ -131,8 +131,8 @@ Except for Lexico which computes the lexicographic optimal solutions, the solvin
 ### Information
 - Julia is available on macOS, linux, windows for a local use or online on [JuliaBox](https://juliabox.com/) for a distant use
 - vOptSolver (composed of vOptGeneric, vOptSpecific, and vOptTools) is free, open source under MIT licence. 
-- vOptSolver has been tested with Julia 0.6 on macOS 10.12.6 and linux-Ubuntu 14.04 LTS. 
-- vOptGeneric has been tested with Julia 0.6 on windows 10 64 bits.
+- vOptSolver has been tested with Julia 1.0 on macOS 10.13.6 and linux-Ubuntu 14.04 LTS. 
+- vOptGeneric has been tested with Julia 1.0 on windows 10 64 bits.
 
 ### Installation and usage Instructions
 Refer to the instructions provided for
@@ -140,7 +140,8 @@ Refer to the instructions provided for
 - [vOptGeneric](https://github.com/vOptSolver/vOptGeneric.jl)
 
 
-## Documentation
+## Documentation (working on it)
+The documentation has been written for Julia v0.6.4. New versions compliant with v1.x are for soon. We apologize if some examples raise an error.
 - Tutorial (in waiting a user manual) for new users [(folder docs)](https://github.com/vOptSolver/vOptSolver/tree/master/docs)
 - Examples of problems ready to be performed [(folder examples)](https://github.com/vOptSolver/vOptSolver/tree/master/examples)
 - Presentations given in conferences [(folder talks)](https://github.com/vOptSolver/vOptSolver/tree/master/talks)
