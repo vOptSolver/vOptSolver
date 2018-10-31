@@ -100,19 +100,19 @@ The development of vOptSolver started in the ANR/DFG-14-CE35-0034-01 research pr
 ### Algorithms integrated
 Except for Lexico which computes the lexicographic optimal solutions, the solving algorithms included compute an exact complete set of non-dominated points.
 - vOptGeneric: generic algorithms for structured or non-structured discrete problems,
-    - Lexico: lexicographic optimal solutions / pILP (Julia+JuMP) 
-    - Haimes1971: epsilon-constraint method / 2ILP (Julia+JuMP)
-    - Aneja1979: Aneja & Nair method (also named the dichotomic method)/ 2ILP (Julia+JuMP)
-    - Chalmet1986: Chalmet et al. method / 2ILP (Julia+JuMP)
-    - Forthcoming:[Vincent2013: branch-and-bound / 2MILP]
+    - Lexico: lexicographic optimal solutions / p-ILP (Julia+JuMP) 
+    - Haimes1971: epsilon-constraint method / 2-ILP (Julia+JuMP)
+    - Aneja1979: Aneja & Nair method (also named the dichotomic method)/ 2-ILP (Julia+JuMP)
+    - Chalmet1986: Chalmet et al. method / 2-ILP (Julia+JuMP)
+    - Project:[Vincent2013: branch-and-bound / 2-MILP]
 - vOptSpecific: specific algorithms for structured (MOCO/MOMILP) problem,
     - Przybylski2008: 2LAP2008 (C)
     - Wassenhove1980: 2OSP1980 (implemented in 2017 in Julia)
     - Jorge2010: 2UKP2010 (re-implemented in 2017 in Julia)
     - Delmee2017: 2UMFLP2016 (C++)
-    - Forthcoming:[Gandibleux2012: 2UDFLP2012 (C++); ; Gandibleux2006: PATHS (C)]
+    - Forthcoming:[Gandibleux2006: PATHS (re-implemented in 2018 in Julia); Gandibleux2012: 2UDFLP2012 (re-implemented in 2018 in C)]
 - vOptTools: collection of primitives for multiobjective linear optimization problems, 
-    - Dumez2017: algorithm for maintaining non-dominated points/2ILP (Julia)
+    - Forthcoming: Dumez2017: algorithm for maintaining non-dominated points/2ILP (Julia)
 
 ### Inputs
 - Non-structured problems: 
