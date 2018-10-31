@@ -82,29 +82,26 @@ The development of vOptSolver started in the ANR/DFG-14-CE35-0034-01 research pr
 
 ## Features
 
-### Models and Problems managed
+### Problems managed
 - vOptGeneric: Multiobjective non-structured problems / algebraic language (JuMP),
-    - p-LP: model of Linear Program
-    - p-MILP: model of Mixed Integer Linear Program
-    - p-ILP: model of Integer Linear Program 
-    - 2-ILP: algorithms computing Y_N or Y_{SN} of Integer Linear Program
-    - p-ILP: algorithms computing Y_{lex} of Integer Linear Program    
-    - Forthcoming: algorithms for [{2,3}-LP]. Projects: algorithms for [3-ILP, \{2,3\}-MILP]
+    - p-LP: Linear Program
+    - p-MILP: Mixed Integer Linear Program
+    - p-ILP: Integer Linear Program 
 - vOptSpecific: Multiobjective structured problems / Application Programming Interface (API),
-    -  2-LAP: Linear Assignment Problem 
-    -  2-OSP: One machine Scheduling Problem
-    -  2-UKP: binary Unidimensional knapsack problem 
-    -  2-UMFLP: Uncapacitated Mixed variables Facility Location Problem 
-    -  Forthcoming: [p-PATHS, 2-UDFLP]. Projects : [MKP, SSCFLP, CFLP]
+    - 2-LAP: Linear Assignment Problem 
+    - 2-OSP: One machine Scheduling Problem
+    - 2-UKP: binary Unidimensional knapsack problem 
+    - 2-UMFLP: Uncapacitated Mixed variables Facility Location Problem 
+    - Forthcoming: [p-PATHS, 2-UDFLP]. Projects : [MKP, SSCFLP, CFLP]
 
 ### Algorithms integrated
-Except for Lexico which computes the lexicographic optimal solutions, the solving algorithms included compute an exact complete set of non-dominated points.
+The solving algorithms included compute exact solution(s) corresponding to Y_{lex}, Y_{SN}, or Y_{N}.
 - vOptGeneric: generic algorithms for structured or non-structured discrete problems,
-    - Lexico: lexicographic optimal solutions / p-ILP (Julia+JuMP) 
-    - Haimes1971: epsilon-constraint method / 2-ILP (Julia+JuMP)
-    - Aneja1979: Aneja & Nair method (also named the dichotomic method)/ 2-ILP (Julia+JuMP)
-    - Chalmet1986: Chalmet et al. method / 2-ILP (Julia+JuMP)
-    - Project:[Vincent2013: branch-and-bound / 2-MILP]
+    - Lexico: compute Y_{lex}, the lexicographic optimal solutions for p-ILP (Julia+JuMP) 
+    - Aneja1979: compute Y_{SN} with Aneja & Nair method (also named the dichotomic method) for 2-ILP (Julia+JuMP)
+    - Haimes1971: compute Y_{N} with epsilon-constraint method for 2-ILP (Julia+JuMP)
+    - Chalmet1986: compute Y_N with Chalmet et al. method for 2-ILP (Julia+JuMP) 
+    - Forthcoming: algorithms for [{2,3}-LP]. Projects: algorithms for [3-ILP, \{2,3\}-MILP]
 - vOptSpecific: specific algorithms for structured (MOCO/MOMILP) problem,
     - Przybylski2008: 2LAP2008 (C)
     - Wassenhove1980: 2OSP1980 (implemented in 2017 in Julia)
