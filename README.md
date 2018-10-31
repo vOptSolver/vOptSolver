@@ -82,12 +82,14 @@ The development of vOptSolver started in the ANR/DFG-14-CE35-0034-01 research pr
 
 ## Features
 
-### Problems managed
+### Models and Problems managed
 - vOptGeneric: Multiobjective non-structured problems / algebraic language (JuMP),
-    - LP: Linear Program
-    - MILP: Mixed Integer Linear Program
-    - ILP: Integer Linear Program 
-    - Forthcoming: Algorithms for [{2,3}-LP]. Projects: Algorithms for [3-ILP, \{2,3\}-MILP]
+    - p-LP: model of Linear Program
+    - p-MILP: model of Mixed Integer Linear Program
+    - p-ILP: model of Integer Linear Program 
+    - 2-ILP: algorithms computing Y_N or Y_{SN} of Integer Linear Program
+    - p-ILP: algorithms computing Y_{lex} of Integer Linear Program    
+    - Forthcoming: algorithms for [{2,3}-LP]. Projects: algorithms for [3-ILP, \{2,3\}-MILP]
 - vOptSpecific: Multiobjective structured problems / Application Programming Interface (API),
     -  LAP: Linear Assignment Problem 
     -  OSP: One machine Scheduling Problem
