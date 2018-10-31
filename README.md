@@ -91,11 +91,11 @@ The development of vOptSolver started in the ANR/DFG-14-CE35-0034-01 research pr
     - p-ILP: algorithms computing Y_{lex} of Integer Linear Program    
     - Forthcoming: algorithms for [{2,3}-LP]. Projects: algorithms for [3-ILP, \{2,3\}-MILP]
 - vOptSpecific: Multiobjective structured problems / Application Programming Interface (API),
-    -  LAP: Linear Assignment Problem 
-    -  OSP: One machine Scheduling Problem
-    -  UKP: binary Unidimensional knapsack problem 
-    -  UMFLP: Uncapacitated Mixed variables Facility Location Problem 
-    -  Forthcoming: [PATHS, UDFLP]. Projects : [MKP, SSCFLP, CFLP]
+    -  2-LAP: Linear Assignment Problem 
+    -  2-OSP: One machine Scheduling Problem
+    -  2-UKP: binary Unidimensional knapsack problem 
+    -  2-UMFLP: Uncapacitated Mixed variables Facility Location Problem 
+    -  Forthcoming: [p-PATHS, 2-UDFLP]. Projects : [MKP, SSCFLP, CFLP]
 
 ### Algorithms integrated
 Except for Lexico which computes the lexicographic optimal solutions, the solving algorithms included compute an exact complete set of non-dominated points.
