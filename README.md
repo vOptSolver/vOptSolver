@@ -1,6 +1,6 @@
 # Solver of multiobjective linear optimization problems
 
-**vOptSolver** is an ecosystem for modeling and solving multiobjective linear optimization problems (MOCO, MOIP, MOMIP, MOLP). It is currently supported by the ANR/DFG-14-CE35-0034-01 research project [(link)](https://vopt-ANR-DFG.univ-nantes.fr/). 
+**vOptSolver** is an ecosystem for modeling and solving multiobjective linear optimization problems (MOCO, MOIP, MOMIP, MOLP). It has been supported by the ANR/DFG-14-CE35-0034-01 research project [(link)](https://vopt-ANR-DFG.univ-nantes.fr/). 
 It integrates several exact algorithms for computing a complete set of non-dominated points for structured and non-structured optimization problems with at least two objectives.
 
 This repository (1) gives a description of the solver and (2) hosts documents covering all parts of the solver.
@@ -15,6 +15,7 @@ This repository (1) gives a description of the solver and (2) hosts documents co
 - [References](./README.md#references)
 
 ### News
+    22-Apr-2019: Preparing an update of the documentation 
     31-Oct-2018: vOptSpecific and vOptGeneric are compliant with Julia v1.x 
     01-Jul-2018: Preparing the switch to Julia 0.7 and to the new version of JuMP 
     01-Sep-2017: Algorithms added to vOptGeneric and vOptSpecific, documentation and examples are coming.
@@ -31,8 +32,8 @@ Prof. Dr. Xavier Gandibleux, University of Nantes - France [(contact)](http://ww
 
 ### Developers
 By chronological order:
-- Current contributors: Xavier Gandibleux, Anthony Przybylski, Gauthier Soleilhac, Quentin Delmée.
-- Past contributors: Clément Turcat, Dorian Dumez, Pauline Chatelier, Flavien Lucas.
+- Current contributors: Xavier Gandibleux, Anthony Przybylski, Gauthier Soleilhac.
+- Past contributors: Quentin Delmée, Dorian Dumez, Pauline Chatelier, Flavien Lucas, Clément Turcat.
 
 ### How To Contribute
 1. in adding your examples (code JuMP + data) solved with vOptGeneric to the collection;
