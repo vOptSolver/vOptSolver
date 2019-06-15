@@ -15,6 +15,7 @@ This repository (1) gives a description of the solver and (2) hosts documents co
 - [References](./README.md#references)
 
 ### News
+    15-Jun-2019: Testing the version of vOptSpecific compliant with JuMP 0.19  
     22-Apr-2019: Preparing an update of the documentation 
     31-Oct-2018: vOptSpecific and vOptGeneric are compliant with Julia v1.x 
     01-Jul-2018: Preparing the switch to Julia 0.7 and to the new version of JuMP 
