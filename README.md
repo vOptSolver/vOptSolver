@@ -1,6 +1,6 @@
 # Solver of multiobjective linear optimization problems
 
-**vOptSolver** is an ecosystem for modeling and solving multiobjective linear optimization problems (MOMIP, MOLP, MOIP, MOCO). It integrates several exact algorithms for computing a complete set of non-dominated points for structured and non-structured optimization problems with at least two objectives.
+**vOptSolver** is an ecosystem for modeling and solving multiobjective linear optimization problems (MOMIP, MOLP, MOIP, MOCO). It integrates several exact algorithms for computing the set of non-dominated points, and the corresponding complete set of efficient solutions, for structured and non-structured optimization problems with at least two objectives.
 
 This repository (1) gives a description of the solver and (2) hosts documents covering all parts of the solver.
 
