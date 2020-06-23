@@ -1,7 +1,6 @@
 # Solver of multiobjective linear optimization problems
 
-**vOptSolver** is an ecosystem for modeling and solving multiobjective linear optimization problems (MOCO, MOIP, MOMIP, MOLP). It has been supported by the ANR/DFG-14-CE35-0034-01 research project [(link)](https://vopt-ANR-DFG.univ-nantes.fr/). 
-It integrates several exact algorithms for computing a complete set of non-dominated points for structured and non-structured optimization problems with at least two objectives.
+**vOptSolver** is an ecosystem for modeling and solving multiobjective linear optimization problems (MOMIP, MOLP, MOIP, MOCO). It integrates several exact algorithms for computing a complete set of non-dominated points for structured and non-structured optimization problems with at least two objectives.
 
 This repository (1) gives a description of the solver and (2) hosts documents covering all parts of the solver.
 
@@ -32,9 +31,9 @@ All bugs, feature requests, pull requests, feedback, etc., are welcome.
 Prof. Dr. Xavier Gandibleux, University of Nantes - France [(contact)](http://www.univ-nantes.fr/gandibleux-x)
 
 ### Developers
-By chronological order:
-- Current contributors: Xavier Gandibleux, Anthony Przybylski, Gauthier Soleilhac.
-- Past contributors: Quentin Delmée, Dorian Dumez, Pauline Chatelier, Flavien Lucas, Clément Turcat.
+By alphabetical order:
+- Current contributors: Lucas Baussey, Xavier Gandibleux, Anthony Przybylski, Gauthier Soleilhac.
+- Past contributors: Pauline Chatelier, Quentin Delmée, Dorian Dumez, Flavien Lucas, Clément Turcat.
 
 ### How To Contribute
 1. in adding your examples (code JuMP + data) solved with vOptGeneric to the collection;
@@ -47,7 +46,7 @@ By chronological order:
 In brief, every contributions aiming to share our efforts, our algorithms, our productions around this open source software are welcome.
 
 ### License
-vOptSolver is distributed under the MIT License. 
+vOptSolver is distributed under the MIT [License](./LICENSE.md).
 
 ### How To Cite
 Xavier Gandibleux, Gauthier Soleilhac, Anthony Przybylski, Flavien Lucas, Stefan Ruzika, Pascal Halffmann. vOptSolver,   a   "get   and   run"   solver   of multiobjective  linear  optimization  problems  built  on Julia and JuMP. *MCDM2017: 24th International Conference on Multiple Criteria Decision Making*. July 10-14, 2017. Ottawa (Canada).
@@ -57,8 +56,8 @@ vOptSolver: an open source software environment for multiobjective mathematical 
 *IFORS2017: 21st Conference of the International Federation of Operational Research Societies*. 
 July 17-21, 2017. Quebec City (Canada).
 
-### Cooperation
-The development of vOptSolver started in the ANR/DFG-14-CE35-0034-01 research project vOpt [(link)](https://vopt-ANR-DFG.univ-nantes.fr/) involving Université de Nantes (France) and University of Koblenz-Landau/University of Kaiserslautern (Germany).
+### Support
+The development of vOptSolver started in the ANR/DFG-14-CE35-0034-01 research project vOpt (2015-2019) [(link)](https://vopt-ANR-DFG.univ-nantes.fr/) involving Université de Nantes (France) and University of Koblenz-Landau/University of Kaiserslautern (Germany).
 
 ## Overview
 
@@ -79,7 +78,7 @@ The development of vOptSolver started in the ANR/DFG-14-CE35-0034-01 research pr
 
 ### Background
 - Julia programming language [(link)](http://julialang.org/)
-- JuMP algebraic language [(link)](http://www.juliaopt.org/JuMP.jl/0.18/)
+- JuMP algebraic language [(link)](https://github.com/jump-dev/JuMP.jl)
 - Usual free (GLPK, Clp/Cbc) and commercial (CPLEX, GUROBI) MILP solvers
 
 ## Features
@@ -110,8 +109,6 @@ The solving algorithms included compute exact solution(s) corresponding to Y_{le
     - Jorge2010: 2UKP2010 (re-implemented in 2017 in Julia)
     - Delmee2017: 2UMFLP2016 (C++)
     - Forthcoming:[Gandibleux2006: PATHS (re-implemented in 2018 in Julia); Gandibleux2012: 2UDFLP2012 (re-implemented in 2018 in C)]
-- vOptTools: collection of primitives for multiobjective linear optimization problems, 
-    - Forthcoming: Dumez2017: algorithm for maintaining non-dominated points/2ILP (Julia)
 
 ### Inputs
 - Non-structured problems: 
@@ -131,9 +128,9 @@ The solving algorithms included compute exact solution(s) corresponding to Y_{le
 ## Instructions 
 
 ### Information
-- Julia is available on macOS, linux, windows for a local use or online on [JuliaBox](https://juliabox.com/) for a distant use
-- vOptSolver (composed of vOptGeneric, vOptSpecific, and vOptTools) is free, open source under MIT licence. 
-- vOptSolver has been tested with Julia 1.0 on macOS 10.13.6 and linux-Ubuntu 14.04 LTS. 
+- Julia is available on macOS, linux, and windows
+- vOptSolver (composed of vOptGeneric and vOptSpecific) is free, open source under MIT licence. 
+- vOptGeneric and vOptSpecific have been tested with Julia 1.0 on macOS 10.13.6 and linux-Ubuntu 14.04 LTS. 
 - vOptGeneric has been tested with Julia 1.0 on windows 10 64 bits.
 
 ### Installation and usage Instructions
