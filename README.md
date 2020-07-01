@@ -86,8 +86,8 @@ The development of vOptSolver started in the ANR/DFG-14-CE35-0034-01 research pr
 ### Problems managed
 - vOptGeneric: Multiobjective non-structured problems / algebraic language (JuMP),
     - p-LP: Linear Program
-    - p-MILP: Mixed Integer Linear Program
-    - p-ILP: Integer Linear Program 
+    - p-MIP: Mixed Integer linear Program
+    - p-IP: Integer linear Program 
 - vOptSpecific: Multiobjective structured problems / Application Programming Interface (API),
     - 2-LAP: Linear Assignment Problem 
     - 2-OSP: One machine Scheduling Problem
@@ -98,12 +98,12 @@ The development of vOptSolver started in the ANR/DFG-14-CE35-0034-01 research pr
 ### Algorithms integrated
 The solving algorithms included compute exact solution(s) corresponding to Y_{lex}, Y_{SN}, or Y_{N}.
 - vOptGeneric: generic algorithms for structured or non-structured discrete problems,
-    - Lexico: compute Y_{lex}, the lexicographic optimal solutions for p-ILP (Julia+JuMP) 
-    - Aneja1979: compute Y_{SN} with Aneja & Nair method (also named the dichotomic method) for 2-ILP (Julia+JuMP)
-    - Haimes1971: compute Y_{N} with epsilon-constraint method for 2-ILP (Julia+JuMP)
-    - Chalmet1986: compute Y_N with Chalmet et al. method for 2-ILP (Julia+JuMP) 
-    - Forthcoming: algorithms for [{2,3}-LP]. Projects: algorithms for [3-ILP, \{2,3\}-MILP]
-- vOptSpecific: specific algorithms for structured (MOCO/MOMILP) problem,
+    - Lexico: compute Y_{lex}, the lexicographic optimal solutions for p-IP (Julia+JuMP) 
+    - Aneja1979: compute Y_{SN} with Aneja & Nair method (also named the dichotomic method) for 2-IP (Julia+JuMP)
+    - Haimes1971: compute Y_{N} with epsilon-constraint method for 2-IP (Julia+JuMP)
+    - Chalmet1986: compute Y_N with Chalmet et al. method for 2-IP (Julia+JuMP) 
+    - Forthcoming: algorithms for [{2,3}-LP]. Projects: algorithms for [3-IP, \{2,3\}-MIP]
+- vOptSpecific: specific algorithms for structured (MOCO) problem,
     - Przybylski2008: 2LAP2008 (C)
     - Wassenhove1980: 2OSP1980 (implemented in 2017 in Julia)
     - Jorge2010: 2UKP2010 (re-implemented in 2017 in Julia)
@@ -113,15 +113,15 @@ The solving algorithms included compute exact solution(s) corresponding to Y_{le
 ### Inputs
 - Non-structured problems: 
     - direct with the provided languages (Julia, JuMP)
-    - standard MOP format (ILP, MILP, LP)
-    - specific problem format (MILP)
+    - standard MOP format (IP, MIP, LP)
+    - specific problem format (MIP)
 - Structured problems: 
     -  direct with the language (Julia), 
     -  specific problem format (2LAP, 2UKP, 2UFLP)
 
 ### Outputs
 - Non-structured problems: 
-    - standard 2MOP format (ILP, MILP, LP)
+    - standard 2MOP format (IP, MIP, LP)
 - Structured problems: 
     - specific problem format (2LAP, 2UKP, 2UFLP)
 
@@ -197,12 +197,12 @@ The documentation has been written for Julia v0.6.4. New versions compliant with
 
 Terms and acronyms used
 - LP: Linear Program
-- MILP: Mixed Integer Linear Program
+- MIP: Mixed Integer linear Program
 - IP: Integer linear program
 - CO: Combinatorial Optimization
 - MOLP: MultiObjective linear program
 - MOIP: MultiObjective Integer linear program
-- MOMILP: MultiObjective Mixed Integer Linear Program
+- MOMIP: MultiObjective Mixed Integer linear Program
 - MOCO: MultiObjective Combinatorial Optimization
 - OSP: One machine Scheduling Problem
 - LAP: Linear Assignment Problem
