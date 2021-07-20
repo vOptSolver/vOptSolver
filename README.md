@@ -14,6 +14,7 @@ This repository (1) gives a description of the solver and (2) hosts documents co
 - [References](./README.md#references)
 
 ### News
+    21-Jul-2021: Examples for vOptGeneric updated and new examples added
     15-Jun-2019: Testing the version of vOptGeneric compliant with JuMP 0.19  
     22-Apr-2019: Preparing an update of the documentation 
     31-Oct-2018: vOptSpecific and vOptGeneric are compliant with Julia v1.x 
@@ -32,8 +33,8 @@ Prof. Dr. Xavier Gandibleux, University of Nantes - France [(contact)](http://ww
 
 ### Developers
 By alphabetical order:
-- Current contributors: Lucas Baussey, Xavier Gandibleux, Anthony Przybylski, Gauthier Soleilhac.
-- Past contributors: Pauline Chatelier, Quentin Delmée, Dorian Dumez, Flavien Lucas, Clément Turcat.
+- Current contributors: Xavier Gandibleux, Anthony Przybylski, Gauthier Soleilhac.
+- Past contributors: Lucas Baussey, Pauline Chatelier, Quentin Delmée, Dorian Dumez, Flavien Lucas, Clément Turcat.
 
 ### How To Contribute
 1. in adding your examples (code JuMP + data) solved with vOptGeneric to the collection;
