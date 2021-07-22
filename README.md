@@ -29,7 +29,7 @@ This repository (1) gives a description of the solver and (2) hosts documents co
 All bugs, feature requests, pull requests, feedback, etc., are welcome. 
 
 ### Coordinator
-Prof. Dr. Xavier Gandibleux, University of Nantes - France [(contact)](http://www.univ-nantes.fr/gandibleux-x)
+Prof. Dr. Xavier Gandibleux, University of Nantes - France [(contact)](https://www.univ-nantes.fr/xavier-gandibleux)
 
 ### Developers
 By alphabetical order:
@@ -130,9 +130,9 @@ The solving algorithms included compute exact solution(s) corresponding to Y_{le
 
 ### Information
 - Julia is available on macOS, linux, and windows
-- vOptSolver (composed of vOptGeneric and vOptSpecific) is free, open source under MIT licence. 
-- vOptGeneric and vOptSpecific have been tested with Julia 1.0 on macOS 10.13.6 and linux-Ubuntu 14.04 LTS. 
-- vOptGeneric has been tested with Julia 1.0 on windows 10 64 bits.
+- vOptSolver (composed of vOptGeneric and vOptSpecific) is free, open source under MIT licence.
+- vOptGeneric has been tested with Julia 1.6 on macOS 11.4, linux-Ubuntu 18.04.5 LTS and Windows 10 64 bits.  
+- vOptSpecific have been tested with Julia 1.6 on macOS 11.4 and linux-Ubuntu 18.04.5 LTS. 
 
 ### Installation and usage Instructions
 Refer to the instructions provided for
@@ -141,7 +141,9 @@ Refer to the instructions provided for
 
 
 ## Documentation (working on it)
-The documentation has been written for Julia v0.6.4. New versions compliant with v1.x are for soon. We apologize if some examples raise an error.
+The available documentation is obsolete (written for Julia v0.6.4). New versions compliant with v1.x are for soon. 
+
+Old documentation:
 - Tutorial (in waiting a user manual) for new users [(folder docs)](https://github.com/vOptSolver/vOptSolver/tree/master/docs)
 - Examples of problems ready to be performed [(folder examples)](https://github.com/vOptSolver/vOptSolver/tree/master/examples)
 - Presentations given in conferences [(folder talks)](https://github.com/vOptSolver/vOptSolver/tree/master/talks)
