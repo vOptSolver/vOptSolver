@@ -141,14 +141,16 @@ Refer to the instructions provided for
 - [vOptGeneric](https://github.com/vOptSolver/vOptGeneric.jl)
 
 
-## Documentation (working on it)
-The available documentation is obsolete (written for Julia v0.6.4). New versions compliant with v1.x are for soon. 
+## Documentation and examples
+NB: the available documentation is obsolete (written for Julia v0.6.4; new documentation compliant with v1.x is coming). 
 
 Old documentation:
 - Tutorial (in waiting a user manual) for new users [(folder docs)](https://github.com/vOptSolver/vOptSolver/tree/master/docs)
-- Examples of problems ready to be performed [(folder examples)](https://github.com/vOptSolver/vOptSolver/tree/master/examples)
 - Presentations given in conferences [(folder talks)](https://github.com/vOptSolver/vOptSolver/tree/master/talks)
 
+Examples of problems ready to be solved:
+- With vOptGeneric [(folder examples)](https://github.com/vOptSolver/vOptGeneric.jl/tree/master/examples)
+- With vOptSpecific [(folder examples)](https://github.com/vOptSolver/vOptSpecific.jl/tree/master/examples)
 
 ## References
 
