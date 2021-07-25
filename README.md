@@ -51,6 +51,8 @@ In brief, every contributions aiming to share our efforts, our algorithms, our p
 vOptSolver is distributed under the MIT [License](./LICENSE.md).
 
 ### How To Cite
+Xavier Gandibleux, Gauthier Soleilhac, Anthony Przybylski. vOptSolver: an ecosystem for multi-objective linear optimization. *JuliaCon 2021*. July 28-30, 2021. Online and everywhere. [Abstract](https://pretalx.com/juliacon2021/talk/TP88SL/).
+
 Xavier Gandibleux, Gauthier Soleilhac, Anthony Przybylski, Flavien Lucas, Stefan Ruzika, Pascal Halffmann. vOptSolver,   a   "get   and   run"   solver   of multiobjective  linear  optimization  problems  built  on Julia and JuMP. *MCDM2017: 24th International Conference on Multiple Criteria Decision Making*. July 10-14, 2017. Ottawa (Canada).
 
 Xavier Gandibleux, Gauthier Soleilhac, Anthony Przybylski, Stefan Ruzika. 
