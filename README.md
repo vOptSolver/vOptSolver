@@ -2,8 +2,13 @@
 
 **vOptSolver** is an ecosystem for modeling and solving multiobjective linear optimization problems (MOMIP, MOLP, MOIP, MOCO). It integrates several exact algorithms for computing the set of non-dominated points, and the corresponding complete set of efficient solutions, for structured and non-structured optimization problems with at least two objectives.
 
-This repository (1) gives a description of the solver and (2) hosts documents covering all parts of the solver.
+It is composed of the two julia packages **vOptGeneric** and **vOptSpecific**, and hosts **vOPtLib**, a library of numerical instances:
 
+- [vOptGeneric](https://github.com/vOptSolver/vOptGeneric.jl)
+- [vOptSpecific](https://github.com/vOptSolver/vOptSpecific.jl)
+- [vOptLib](https://github.com/vOptSolver/vOptLib)
+
+-----
 
 ### Content
 
