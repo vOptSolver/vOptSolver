@@ -1,0 +1,41 @@
+NAME   vOptModel
+OBJSENSE
+ MAX
+ROWS
+ N  OBJ1
+ N  OBJ2
+ L  CON1
+ G  CON2
+COLUMNS
+    MARKER    'MARKER'                 'INTORG'
+    x_1  CON1  8
+    x_1  CON2  12
+    x_1  OBJ1  6
+    x_1  OBJ2  12
+    x_2  CON1  6
+    x_2  CON2  10
+    x_2  OBJ1  4
+    x_2  OBJ2  10
+    x_3  CON1  4
+    x_3  CON2  5
+    x_3  OBJ1  4
+    x_3  OBJ2  5
+    x_4  CON1  3
+    x_4  CON2  3
+    x_4  OBJ1  4
+    x_4  OBJ2  3
+    x_5  CON1  2
+    x_5  CON2  1
+    x_5  OBJ1  3
+    x_5  OBJ2  1
+    MARKER    'MARKER'                 'INTEND'
+RHS
+    RHS    CON1    15
+    RHS    CON2    -1e16
+BOUNDS
+  UP BOUND x_1 1
+  UP BOUND x_2 1
+  UP BOUND x_3 1
+  UP BOUND x_4 1
+  UP BOUND x_5 1
+ENDATA
