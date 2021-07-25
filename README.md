@@ -14,6 +14,7 @@ This repository (1) gives a description of the solver and (2) hosts documents co
 - [References](./README.md#references)
 
 ### News
+    24-Jul-2021: vOptSpecific updated, and new examples added
     21-Jul-2021: Examples for vOptGeneric updated and new examples added
     15-Jun-2019: Testing the version of vOptGeneric compliant with JuMP 0.19  
     22-Apr-2019: Preparing an update of the documentation 
