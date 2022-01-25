@@ -19,6 +19,7 @@ It is composed of the two julia packages **vOptGeneric** and **vOptSpecific**, a
 - [References](./README.md#references)
 
 ### News
+    25-Jan-2022: Parser for set partitionning problems added
     24-Jul-2021: vOptSpecific updated, and new examples added
     21-Jul-2021: Examples for vOptGeneric updated and new examples added
     15-Jun-2019: Testing the version of vOptGeneric compliant with JuMP 0.19  
