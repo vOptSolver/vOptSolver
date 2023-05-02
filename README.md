@@ -2,11 +2,13 @@
 
 **vOptSolver** is an ecosystem for modeling and solving multiobjective linear optimization problems (MOMIP, MOLP, MOIP, MOCO). It integrates several exact algorithms for computing the set of non-dominated points, and the corresponding complete set of efficient solutions, for structured and non-structured optimization problems with at least two objectives.
 
-It is composed of the two julia packages **vOptGeneric** and **vOptSpecific**, and hosts **vOPtLib**, a library of numerical instances:
+It is composed of the two julia packages ~~**vOptGeneric**~~ and **vOptSpecific**, and hosts **vOPtLib**, a library of numerical instances:
 
-- [vOptGeneric](https://github.com/vOptSolver/vOptGeneric.jl)
+- [vOptGeneric](https://github.com/vOptSolver/vOptGeneric.jl) is now replaced by [MultiObjectiveAlgorithms.jl](https://github.com/jump-dev/MultiObjectiveAlgorithms.jl)
 - [vOptSpecific](https://github.com/vOptSolver/vOptSpecific.jl)
 - [vOptLib](https://github.com/vOptSolver/vOptLib)
+
+NEW (15-Feb-2023): vOptGeneric.jl has been fully redesigned, and becomes **MultiObjectiveAlgorithms.jl (MOA)**, a collection of algorithms for multi-objective optimization integrated to [JuMP](https://jump.dev/) and [MathOptInterface](https://jump.dev/MathOptInterface.jl/stable/). vOptGeneric.jl will be archived soon.
 
 -----
 
@@ -19,6 +21,8 @@ It is composed of the two julia packages **vOptGeneric** and **vOptSpecific**, a
 - [References](./README.md#references)
 
 ### News
+    15-Feb-2023: Simple examples from vOptGeneric have been adapted for MOA 
+    15-Feb-2023: vOptGeneric.jl has been redesigned and becomes MultiObjectiveAlgorithms.jl
     03-Sep-2022: Instances and parser for uncapacitated facility location problems added
     12-Mar-2022: vOptGeneric is compliant with JuMP 0.23.0 and MOI 1.1.0
     25-Jan-2022: Parser for set partitionning problems added
