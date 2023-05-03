@@ -1,14 +1,14 @@
 # Solver of multiobjective linear optimization problems
 
-**vOptSolver** is an ecosystem for modeling and solving multiobjective linear optimization problems (MOMIP, MOLP, MOIP, MOCO). It integrates several exact algorithms for computing the set of non-dominated points, and the corresponding complete set of efficient solutions, for structured and non-structured optimization problems with at least two objectives.
+**vOptSolver** is an ecosystem for modeling and solving multiobjective linear optimization problems (MOMIP, MOLP, MOIP, MOCO). It integrates several exact algorithms for computing the set of non-dominated points $Y_N$, and the corresponding complete set of efficient solutions $X_E$, for structured and non-structured optimization problems with at least two objectives.
 
-It is composed of the two julia packages ~~**vOptGeneric**~~ and **vOptSpecific**, and hosts **vOPtLib**, a library of numerical instances:
+It is composed of the two julia packages **MultiObjectiveAlgorithms** (previously **vOptGeneric**) and **vOptSpecific**, and hosts **vOPtLib**, a library of numerical instances:
 
-- [vOptGeneric](https://github.com/vOptSolver/vOptGeneric.jl) is now replaced by [MultiObjectiveAlgorithms.jl](https://github.com/jump-dev/MultiObjectiveAlgorithms.jl)
+- [MultiObjectiveAlgorithms.jl](https://github.com/jump-dev/MultiObjectiveAlgorithms.jl) which replaces [vOptGeneric](https://github.com/vOptSolver/vOptGeneric.jl) since February 2023
 - [vOptSpecific](https://github.com/vOptSolver/vOptSpecific.jl)
 - [vOptLib](https://github.com/vOptSolver/vOptLib)
 
-NEW (15-Feb-2023): vOptGeneric.jl has been fully redesigned, and becomes **MultiObjectiveAlgorithms.jl (MOA)**, a collection of algorithms for multi-objective optimization integrated to [JuMP](https://jump.dev/) and [MathOptInterface](https://jump.dev/MathOptInterface.jl/stable/). vOptGeneric.jl will be archived soon.
+IMPORTANT (Feb-2023): vOptGeneric.jl has been fully redesigned, and reimplemented. It becomes **MultiObjectiveAlgorithms.jl (MOA)**, a collection of algorithms for multi-objective optimization integrated to [JuMP](https://jump.dev/) and [MathOptInterface](https://jump.dev/MathOptInterface.jl/stable/). MOA comes with an enriched list of multi-objective algorithms, especially for solving problems with 3 objectives. Consequently vOptGeneric.jl is no longer under active development. It will remain available on Github at https://github.com/vOptSolver/vOptGeneric.jl. From February 2023, the JuMP-dev organization will continue to maintain the MOA package and transition development over the long term.
 
 -----
 
@@ -22,7 +22,8 @@ NEW (15-Feb-2023): vOptGeneric.jl has been fully redesigned, and becomes **Multi
 
 ### News
     15-Feb-2023: Simple examples from vOptGeneric have been adapted for MOA 
-    15-Feb-2023: vOptGeneric.jl has been redesigned and becomes MultiObjectiveAlgorithms.jl
+    15-Feb-2023: vOptGeneric.jl is no longer under active development
+    15-Feb-2023: vOptGeneric.jl has been redesigned and reimplemented, it becomes MultiObjectiveAlgorithms.jl
     03-Sep-2022: Instances and parser for uncapacitated facility location problems added
     12-Mar-2022: vOptGeneric is compliant with JuMP 0.23.0 and MOI 1.1.0
     25-Jan-2022: Parser for set partitionning problems added
@@ -45,7 +46,7 @@ All bugs, feature requests, pull requests, feedback, etc., are welcome.
 Prof. Dr. Xavier Gandibleux, University of Nantes - France [(contact)](https://www.univ-nantes.fr/xavier-gandibleux)
 
 ### Developers
-By alphabetical order:
+By alphabetical order (concerning vOptGeneric and vOptSpecific):
 - Current contributors: Xavier Gandibleux, Anthony Przybylski, Gauthier Soleilhac.
 - Past contributors: Lucas Baussey, Pauline Chatelier, Quentin Delmée, Dorian Dumez, Flavien Lucas, Clément Turcat.
 
@@ -62,8 +63,18 @@ In brief, every contributions aiming to share our efforts, our algorithms, our p
 ### License
 vOptSolver is distributed under the MIT [License](./LICENSE.md).
 
-### How To Cite
-Xavier Gandibleux, Gauthier Soleilhac, Anthony Przybylski. vOptSolver: an ecosystem for multi-objective linear optimization. *JuliaCon 2021*. July 28-30, 2021. Online and everywhere. [Abstract](https://pretalx.com/juliacon2021/talk/TP88SL/).
+### References
+Xavier Gandibleux. Multi-objective optimization with JuMP. *JuliaCon 2023*. Massachusetts Institute of Technology. Cambridge, USA. July 25-29, 2023.
+
+Xavier Gandibleux, Gauthier Soleilhac, Anthony Przybylski. vOptSolver: an ecosystem for multi-objective linear optimization. *JuliaCon 2021*. Online and everywhere. July 28-30, 2021. [Abstract](https://pretalx.com/juliacon2021/talk/TP88SL/). **Reference to use for citing vOptSolver**
+
+Anthony Przybylski. Optimisation combinatoire multi-objectif : méthodes de résolution exacte et solveur vOpt. *JuliaDay'2019 : Journée « Julia et Optimisation ». 17 Juin 2019*. Université de Nantes, France. https://julialang.univ-nantes.fr/journee-julia-et-optimisation
+
+Xavier Gandibleux et Anthony Przybylski, Algorithmes de branch-and-bound multiobjectif et vOptSolver. Tutoriel du GDR CNRS RO, ROADEF'2018 : 19e édition du congrès annuel de la Société Française de Recherche Opérationnelle et d'Aide à la Décision. 22 février 2018, Lorient. [Video](https://www.youtube.com/watch?v=jH3AftHsG2s&t=1726s).
+
+Xavier Gandibleux et Anthony Przybylski, Optimisation combinatoire multiobjectif : deux contributions issues du projet de recherche ANR-DFG vOpt. *SPOC16 : 16e journée "Polyèdres et optimisation combinatoire"*. LAMSADE/Université Paris-Dauphine. 15 décembre 2017. 
+
+Xavier Gandibleux, Pascal Halffmann. Designing and Experimenting with vOptSolver an Algorithm for Computing the Weight Set Decomposition. *RAMOO'2017 : 4th International workshop “Recent Advances in Multi-Objective Optimization"*, TU-Kaiserslautern, Germany. 2017.
 
 Xavier Gandibleux, Gauthier Soleilhac, Anthony Przybylski, Flavien Lucas, Stefan Ruzika, Pascal Halffmann. vOptSolver,   a   "get   and   run"   solver   of multiobjective  linear  optimization  problems  built  on Julia and JuMP. *MCDM2017: 24th International Conference on Multiple Criteria Decision Making*. July 10-14, 2017. Ottawa (Canada).
 
